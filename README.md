@@ -7,3 +7,10 @@ by offering prizes for the participants who attend the most.
 ## JSON file back end
 For now, attendance is recorded in a JSON file. This will be upgraded to Mongo db in the future.
 
+### Install and Run
+
+```
+npm install
+npm start
+Point browser to localhost:8080
+```
