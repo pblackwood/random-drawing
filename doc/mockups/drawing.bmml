@@ -1,0 +1,96 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="895" measuredH="830" mockupW="799" mockupH="735">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="96" y="95" w="799" h="735" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="137" y="205" w="-1" h="-1" measuredW="262" measuredH="32" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>Steel%20City%20Backgammon</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="137" y="267" w="-1" h="-1" measuredW="246" measuredH="26" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Quarterly%20Attendance%20Awards%21</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="309" y="302" w="-1" h="-1" measuredW="69" measuredH="26" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Quarter%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="169" y="453" w="-1" h="-1" measuredW="184" measuredH="26" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Attendance%20by%20Player%3A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="361" y="455" w="-1" h="-1" measuredW="215" measuredH="22" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>%28does%20not%20include%20club%20organizers%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::DataGrid" x="179" y="501" w="-1" h="-1" measuredW="236" measuredH="171" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Rank%2CName%2CEvents%0A1%2CGiacomo%20Guilizzoni%2C%207%0A2%2CMarco%20Botton%2C%206%0A3%2CMariah%20Maclachlan%2C4%0A4%2CValerie%20Liberty%2C4%0A5%2CGuido%20Jack%20Guilizzoni%2C3</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="169" y="703" w="-1" h="-1" measuredW="144" measuredH="26" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Pick%20a%20Winner%20%3D%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Button" x="337" y="703" w="-1" h="-1" measuredW="118" measuredH="27" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Roll%20Dem%20Bones%21</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Label" x="265" y="412" w="-1" h="-1" measuredW="233" measuredH="26" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Valerie%20Liberty%2C%20Marco%20Botton</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="137" y="302" w="-1" h="-1" measuredW="42" measuredH="26" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Year%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::ComboBox" x="198" y="303" w="-1" h="-1" measuredW="60" measuredH="24" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>2016</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::ComboBox" x="409" y="303" w="-1" h="-1" measuredW="46" measuredH="24" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Q1</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Canvas" x="137" y="334" w="633" h="445" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Label" x="169" y="368" w="-1" h="-1" measuredW="149" measuredH="26" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Total%20Attendance%3A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Label" x="352" y="368" w="-1" h="-1" measuredW="22" measuredH="26" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>96</text>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Label" x="169" y="409" w="-1" h="-1" measuredW="70" measuredH="26" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Winners%3A</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

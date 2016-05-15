@@ -1,0 +1,27 @@
+.row {
+    font-size: medium;
+}
+
+.header h1, .header h3 {
+    text-align: center
+}
+
+.attendance ul li {
+    list-style: none;
+}
+
+.attendance .events {
+    text-align: center;
+}
+
+.winner {
+    font-weight: bold;
+    color: #884444;
+    margin-left: 10px;
+}
+
+.playerTable {
+    height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
