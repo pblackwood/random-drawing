@@ -1,24 +1,24 @@
+var path = require("path");
 module.exports = {
-    entry: './index.js',
+    entry: {
+        app: ['./index.js']
+    },
     output: {
-        path: './dist',
+        path: path.resolve(__dirname, './dist'),
         filename: 'bundle.js',
         publicPath: '/'
     },
     devServer: {
         inline: true,
-        contentBase: './dist'
+        contentBase: './dist',
+        port: 8090
     },
+    devTool: "source-map",
     module: {
         loaders: [
             {
                 test: /\.js$/,
                 loaders: ['babel'],
-                exclude: /node_modules/
-            },
-            {
-                test: /\.json$/,
-                loaders: ['json'],
                 exclude: /node_modules/
             }
         ]

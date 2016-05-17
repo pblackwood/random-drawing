@@ -8,10 +8,9 @@ const getQuarterlyAttendance = (state) => {
 }
 
 const mapStateToProps = (state) => {
-    // console.log(state.stats[0].winners);
     return {
-        state: state
-        // stats: state.stats[0]
+        club: state.club,
+        stats: state.stats
     }
 }
 

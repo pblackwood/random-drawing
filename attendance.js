@@ -1,12 +1,4 @@
-import "babel-polyfill";
-import React from "react";
-import {render} from "react-dom";
-import {Provider} from "react-redux";
-import {createStore} from "redux";
-import drawingApp from "./reducers";
-import App from "./components/App";
-
-const attendance = {
+export const attendance = {
     club: {
         name: "Steel City Backgammon",
         selectedYear: 2016,
@@ -155,13 +147,3 @@ const attendance = {
         }
     ]
 };
-
-const store = createStore(drawingApp, window.devToolsExtension ? window.devToolsExtension() : undefined);
-
-render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
-    document.getElementById('root')
-)
-

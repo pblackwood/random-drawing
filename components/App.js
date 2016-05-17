@@ -1,12 +1,13 @@
 import React from "react";
-import Header from "./Header";
+import HeaderContainer from "../containers/HeaderContainer";
 import QuarterlyAttendance from "../containers/QuarterlyAttendance";
 
 const App = () => (
     <div>
-        <Header />
+        <HeaderContainer />
         <QuarterlyAttendance />
     </div>
 )
 
 export default App
+

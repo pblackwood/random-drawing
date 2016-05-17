@@ -1,8 +1,9 @@
 {
-  "club": "Steel City Backgammon",
-  "title": "Quarterly Attendance Awards",
-  "selectedYear": 2016,
-  "selectedQuarter": 1,
+  "club": {
+    "name": "Steel City Backgammon",
+    "selectedYear": 2016,
+    "selectedQuarter": 1
+  },
   "stats": [
     {
       "year": 2016,
