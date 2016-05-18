@@ -6,6 +6,58 @@ export const attendance = {
     },
     stats: [
         {
+            year: 2015,
+            quarter: 4,
+            totalAttendance: 56,
+            winners: [],
+            playerList: [
+                {
+                    name: "John Brozda",
+                    events: 4
+                },
+                {
+                    name: "Adam Brozda",
+                    events: 3
+                },
+                {
+                    name: "Neal Brunette",
+                    events: 5
+                },
+                {
+                    name: "Coralie Campobasso",
+                    events: 3
+                },
+                {
+                    name: "Rich Catalano",
+                    events: 4
+                },
+                {
+                    name: "Alex Rodia",
+                    events: 3
+                },
+                {
+                    name: "Charlie Stewart",
+                    events: 2
+                },
+                {
+                    name: "Kristy Stroh",
+                    events: 4
+                },
+                {
+                    name: "Scott Turner",
+                    events: 4
+                },
+                {
+                    name: "Bill Versaw",
+                    events: 3
+                },
+                {
+                    name: "Jeff Woods",
+                    events: 4
+                }
+            ]
+        },
+        {
             year: 2016,
             quarter: 1,
             totalAttendance: 80,
@@ -142,6 +194,62 @@ export const attendance = {
                 {
                     name: "Marianne",
                     events: 1
+                }
+            ]
+        },
+        {
+            year: 2016,
+            quarter: 2,
+            totalAttendance: 68,
+            winners: [],
+            playerList: [
+                {
+                    name: "Andy Cornelius",
+                    events: 2
+                },
+                {
+                    name: "Jean Cronyn",
+                    events: 2
+                },
+                {
+                    name: "Dean DeGregorio",
+                    events: 1
+                },
+                {
+                    name: "Aleesha DeMatt",
+                    events: 2
+                },
+                {
+                    name: "Bryan DeMatt",
+                    events: 4
+                },
+                {
+                    name: "Andy Field",
+                    events: 1
+                },
+                {
+                    name: "Stevie Grund",
+                    events: 3
+                },
+                {
+                    name: "Frank Tillman",
+                    events: 1
+                },
+                {
+                    name: "Scott Turner",
+                    events: 4
+                },
+                {
+                    name: "Bill Versaw",
+                    events: 3
+                },
+                {
+                    name: "Jeff Woods",
+                    events: 4
+                },
+                {
+                    name: "Joe Z",
+                    events: 3
                 }
             ]
         }

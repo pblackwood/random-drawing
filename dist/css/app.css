@@ -10,8 +10,24 @@
     list-style: none;
 }
 
-.attendance .events {
+.attendance .events, .attendance h4 {
     text-align: center;
+}
+
+.header h4 span {
+    vertical-align: middle;
+}
+
+.header select {
+    margin-left: 10px;
+}
+
+.header select#quarter {
+    width: 50px;
+}
+
+.header select#year {
+    width: 75px;
 }
 
 .winner {
