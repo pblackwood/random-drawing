@@ -4,16 +4,7 @@ const Header = ({club, onQuarterChange, onYearChange}) => (
     <div className="header">
         <h1>{club.name}</h1>
         <h3>Quarterly Attendance Awards</h3>
-        <h4>For
-            <select
-                id="quarter"
-                value={club.selectedQuarter}
-                onChange={onQuarterChange}
-            >
-                {[1, 2, 3, 4].map((i) => (
-                    <option key={i} value={i}>Q{i}</option>
-                ))}
-            </select>
+        <h4>Year:
             <select
                 id="year"
                 value={club.selectedYear}
@@ -21,6 +12,16 @@ const Header = ({club, onQuarterChange, onYearChange}) => (
             >
                 {[2015, 2016].map((i) => (
                     <option key={i} value={i}>{i}</option>
+                ))}
+            </select>
+            Quarter:
+            <select
+                id="quarter"
+                value={club.selectedQuarter}
+                onChange={onQuarterChange}
+            >
+                {[1, 2, 3, 4].map((i) => (
+                    <option key={i} value={i}>Q{i}</option>
                 ))}
             </select>
         </h4>
