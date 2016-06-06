@@ -1,20 +1,21 @@
 import React, {PropTypes} from "react";
 
 const Header = ({club, onQuarterChange, onYearChange}) => (
-    <div className="header">
+    <div className="header row">
         <h1>{club.name}</h1>
         <h3>Quarterly Attendance Awards</h3>
-        <h4>Year:
+        <h4 className="col-xs-6 col-sm-5 col-sm-offset-1 col-md-4 col-md-offset-2" style={{textAlign: 'right'}}>Year:
             <select
                 id="year"
                 value={club.selectedYear}
                 onChange={onYearChange}
             >
-                {[2015, 2016].map((i) => (
+                {[2016].map((i) => (
                     <option key={i} value={i}>{i}</option>
                 ))}
             </select>
-            Quarter:
+        </h4>
+        <h4 className="col-xs-6 col-sm-5 col-md-4">Quarter:
             <select
                 id="quarter"
                 value={club.selectedQuarter}

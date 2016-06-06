@@ -1,6 +1,24 @@
 import React, {PropTypes} from "react";
 
 const Attendance = ({club, stats, onWinnerClick}) => {
+    let winners;
+    if (stats.winners.length) {
+        winners =
+            <div className="winner">
+                <h3>Winners for this Quarter: {stats.winners.toString()}</h3>
+            </div>
+    }
+    // TODO - expose the random winner somehow but not on the site
+    // else {
+    //     winners =
+    //         <div>
+    //             <button onClick={() => onWinnerClick(stats.year, stats.quarter)}>Pick a Winner!</button>
+    //             <span className="winner">==></span>
+    //             {stats.winners.map((winner, i) =>
+    //                 <span className="winner" key={i}>{winner}</span>
+    //             )}
+    //         </div>
+    // }
 
     if (stats.playerList.length > 0) {
         return (
@@ -8,27 +26,24 @@ const Attendance = ({club, stats, onWinnerClick}) => {
                 <h4>Total Events Attended (not including organizers): {stats.totalAttendance}</h4>
                 <hr />
                 <div className="playerTable">
-                    <table>
+                    <table className="p">
                         <tbody>
                         <tr>
                             <th>Player</th>
                             <th>Events Attended</th>
-                        </tr>
-                        {getSortedPlayerList(stats.playerList).map((player, i) =>
-                            <tr key={i}>
-                                <td>{player.name}</td>
-                                <td className="events">{player.events}</td>
                             </tr>
-                        )}
+                        {
+                            getSortedPlayerList(stats.playerList).map((player, i) =>
+                                <tr key={i}>
+                                    <td>{player.name}</td>
+                                    <td className="events">{player.events}</td>
+                                </tr>
+                            )}
                         </tbody>
                     </table>
                 </div>
                 <br />
-                <button onClick={() => onWinnerClick(stats.year, stats.quarter)}>Pick a Winner!</button>
-                <span className="winner">==></span>
-                {stats.winners.map((winner, i) =>
-                    <span className="winner" key={i}>{winner}</span>
-                )}
+                {winners}
                 <br />
             </div>
         )

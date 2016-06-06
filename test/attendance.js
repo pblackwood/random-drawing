@@ -9,9 +9,61 @@ export const attendance = {
     },
     stats: [
         {
+            year: 2015,
+            quarter: 4,
+            totalAttendance: 56,
+            winners: [],
+            playerList: [
+                {
+                    name: "John Brozda",
+                    events: 4
+                },
+                {
+                    name: "Adam Brozda",
+                    events: 3
+                },
+                {
+                    name: "Neal Brunette",
+                    events: 5
+                },
+                {
+                    name: "Coralie Campobasso",
+                    events: 3
+                },
+                {
+                    name: "Rich Catalano",
+                    events: 4
+                },
+                {
+                    name: "Alex Rodia",
+                    events: 3
+                },
+                {
+                    name: "Charlie Stewart",
+                    events: 2
+                },
+                {
+                    name: "Kristy Stroh",
+                    events: 4
+                },
+                {
+                    name: "Scott Turner",
+                    events: 4
+                },
+                {
+                    name: "Bill Versaw",
+                    events: 3
+                },
+                {
+                    name: "Jeff Woods",
+                    events: 4
+                }
+            ]
+        },
+        {
             year: 2016,
             quarter: 1,
-            totalAttendance: 0,
+            totalAttendance: 80,
             winners: ["Joe Z", "Kristy Stroh"],
             playerList: [
                 {
@@ -151,28 +203,60 @@ export const attendance = {
         {
             year: 2016,
             quarter: 2,
-            totalAttendance: 0,
+            totalAttendance: 68,
             winners: [],
             playerList: [
                 {
+                    name: "Andy Cornelius",
+                    events: 0
+                },
+                {
                     name: "Jean Cronyn",
-                    events: 2
+                    events: 1
+                },
+                {
+                    name: "Dean DeGregorio",
+                    events: 0
+                },
+                {
+                    name: "Aleesha DeMatt",
+                    events: 0
+                },
+                {
+                    name: "Bryan DeMatt",
+                    events: 0
+                },
+                {
+                    name: "Andy Field",
+                    events: 0
+                },
+                {
+                    name: "Stevie Grund",
+                    events: 0
                 },
                 {
                     name: "Frank Tillman",
-                    events: 2
+                    events: 1
+                },
+                {
+                    name: "Scott Turner",
+                    events: 0
                 },
                 {
                     name: "Bill Versaw",
-                    events: 2
+                    events: 1
+                },
+                {
+                    name: "Jeff Woods",
+                    events: 0
                 },
                 {
                     name: "Joe Z",
-                    events: 2
+                    events: 0
                 },
                 {
                     name: "Steve Hast",
-                    events: 3
+                    events: 1
                 },
                 {
                     name: "Ali",
@@ -184,54 +268,6 @@ export const attendance = {
                 },
                 {
                     name: "Kristy Stroh",
-                    events: 2
-                },
-                {
-                    name: "Neal Brunette",
-                    events: 2
-                },
-                {
-                    name: "Rich Catalano",
-                    events: 2
-                },
-                {
-                    name: "Charlie Stewart",
-                    events: 2
-                },
-                {
-                    name: "Aleesha DeMatt",
-                    events: 1
-                },
-                {
-                    name: "Bryan DeMatt",
-                    events: 2
-                },
-                {
-                    name: "John Brozda",
-                    events: 2
-                },
-                {
-                    name: "Adam Brozda",
-                    events: 1
-                },
-                {
-                    name: "Scott Turner",
-                    events: 1
-                },
-                {
-                    name: "Alex Rodia",
-                    events: 1
-                },
-                {
-                    name: "Coralie Campobasso",
-                    events: 1
-                },
-                {
-                    name: "Bud Bowers",
-                    events: 1
-                },
-                {
-                    name: "Phil Ritt",
                     events: 1
                 }
             ]

@@ -1,4 +1,6 @@
-var path = require("path");
+const path = require('path');
+const webpack = require('webpack');
+
 module.exports = {
     entry: {
         app: ['./index.js']
@@ -13,7 +15,7 @@ module.exports = {
         contentBase: './dist',
         port: 8090
     },
-    devTool: "source-map",
+    devTool: 'cheap-module-source-map',
     module: {
         loaders: [
             {
@@ -22,5 +24,12 @@ module.exports = {
                 exclude: /node_modules/
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env': {
+                'NODE_ENV': JSON.stringify('production')
+            }
+        })
+    ]
 }

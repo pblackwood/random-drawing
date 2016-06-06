@@ -1,4 +1,4 @@
-import {attendance} from "../attendance";
+import {attendance, DEFAULT_YEAR, DEFAULT_QUARTER} from "../attendance";
 
 const pickWinner = (stats) => {
     let players = [];
@@ -14,7 +14,7 @@ const pickWinner = (stats) => {
     return players[nums[index] % players.length];
 }
 
-const stats = (state = getQuarterlyAttendance(2016, 1), action) => {
+const stats = (state = getQuarterlyAttendance(DEFAULT_YEAR, DEFAULT_QUARTER), action) => {
     let newState = state;
     switch (action.type) {
         case 'PICK_WINNER':
@@ -33,13 +33,26 @@ const stats = (state = getQuarterlyAttendance(2016, 1), action) => {
 
 const getQuarterlyAttendance = (year, quarter) => {
     let filtered = attendance.stats.filter(s => (s.year === year && s.quarter === quarter));
-    return filtered.length > 0 ? filtered[0] : {
+    return filtered.length > 0 ? initQuarterlyAttendance(filtered[0]) : {
         year: year,
         quarter: quarter,
         totalAttendance: 0,
         winners: [],
         playerList: []
     };
+}
+
+const initQuarterlyAttendance = (stats) => {
+    stats.totalAttendance = totalAttendance(stats.playerList);
+    return stats;
+}
+
+const totalAttendance = (playerList) => {
+    let total = 0;
+    playerList.forEach(p => {
+        total += p.events
+    });
+    return total;
 }
 
 export default stats
