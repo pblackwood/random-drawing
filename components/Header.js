@@ -4,7 +4,7 @@ const Header = ({club, onQuarterChange, onYearChange}) => (
     <div className="header row">
         <h1>{club.name}</h1>
         <h3>Quarterly Attendance Awards</h3>
-        <h4 className="col-xs-6 col-sm-5 col-sm-offset-1 col-md-4 col-md-offset-2" style={{textAlign: 'right'}}>Year:
+        <h4 className="stats-year col-xs-12 col-sm-5 col-sm-offset-1 col-md-4 col-md-offset-2">Year:
             <select
                 id="year"
                 value={club.selectedYear}
@@ -15,7 +15,7 @@ const Header = ({club, onQuarterChange, onYearChange}) => (
                 ))}
             </select>
         </h4>
-        <h4 className="col-xs-6 col-sm-5 col-md-4">Quarter:
+        <h4 className="stats-quarter col-xs-12 col-sm-5 col-md-4">Quarter:
             <select
                 id="quarter"
                 value={club.selectedQuarter}
