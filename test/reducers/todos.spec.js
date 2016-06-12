@@ -1,5 +1,5 @@
 import expect from "expect";
-import todos from "../../reducers/stats";
+import todos from "../../src/js/reducers/stats";
 
 describe('todos reducer', () => {
     it('should handle initial state', () => {

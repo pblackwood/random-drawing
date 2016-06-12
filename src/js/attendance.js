@@ -156,7 +156,7 @@ export const attendance = {
             playerList: [
                 {
                     name: "Jean Cronyn",
-                    events: 2
+                    events: 3
                 },
                 {
                     name: "Frank Tillman",
@@ -176,7 +176,7 @@ export const attendance = {
                 },
                 {
                     name: "Ali",
-                    events: 1
+                    events: 2
                 },
                 {
                     name: "Ron Lawson",
@@ -184,15 +184,15 @@ export const attendance = {
                 },
                 {
                     name: "Kristy Stroh",
-                    events: 2
+                    events: 3
                 },
                 {
                     name: "Neal Brunette",
-                    events: 2
+                    events: 3
                 },
                 {
                     name: "Rich Catalano",
-                    events: 2
+                    events: 3
                 },
                 {
                     name: "Charlie Stewart",
@@ -208,19 +208,19 @@ export const attendance = {
                 },
                 {
                     name: "John Brozda",
-                    events: 2
+                    events: 3
                 },
                 {
                     name: "Adam Brozda",
-                    events: 1
+                    events: 2
                 },
                 {
                     name: "Scott Turner",
-                    events: 1
+                    events: 2
                 },
                 {
                     name: "Alex Rodia",
-                    events: 1
+                    events: 2
                 },
                 {
                     name: "Coralie Campobasso",
@@ -232,6 +232,22 @@ export const attendance = {
                 },
                 {
                     name: "Phil Ritt",
+                    events: 2
+                },
+                {
+                    name: "Alex Brillman",
+                    events: 1
+                },
+                {
+                    name: "Jack Brillman",
+                    events: 1
+                },
+                {
+                    name: "John Graziani",
+                    events: 1
+                },
+                {
+                    name: "Max Swartwout",
                     events: 1
                 }
             ]
