@@ -1,15 +1,21 @@
 import React, { PropTypes } from "react";
 import { Provider } from "react-redux";
-import { Router, Route, browserHistory } from "react-router";
 import App from "./App";
 
 const Root = ({store}) => (
     <Provider store={store}>
-        <Router history={browserHistory}>
-            <Route path="/" component={App}/>
-        </Router>
+        <App />
     </Provider>
 );
+
+// Use this to bring in React Router
+// const Root = ({store}) => (
+//     <Provider store={store}>
+//         <Router history={browserHistory}>
+//             <Route path="/stats.html" component={App}/>
+//         </Router>
+//     </Provider>
+// );
 
 Root.propTypes = {
     store: PropTypes.object.isRequired

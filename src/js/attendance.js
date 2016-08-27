@@ -1,5 +1,5 @@
 export const DEFAULT_YEAR = 2016;
-export const DEFAULT_QUARTER = 2;
+export const DEFAULT_QUARTER = 3;
 
 export const attendance = {
     club: {
@@ -13,6 +13,7 @@ export const attendance = {
             quarter: 1,
             totalAttendance: 0,
             winners: ["Joe Z", "Kristy Stroh"],
+            pickWinners: false,
             playerList: [
                 {
                     name: "Janeen Bost",
@@ -153,6 +154,7 @@ export const attendance = {
             quarter: 2,
             totalAttendance: 0,
             winners: [],
+            pickWinners: true,
             playerList: [
                 {
                     name: "Jean Cronyn",
@@ -164,15 +166,15 @@ export const attendance = {
                 },
                 {
                     name: "Bill Versaw",
-                    events: 2
+                    events: 3
                 },
                 {
                     name: "Joe Z",
-                    events: 2
+                    events: 3
                 },
                 {
                     name: "Steve Hast",
-                    events: 3
+                    events: 4
                 },
                 {
                     name: "Ali",
@@ -188,11 +190,11 @@ export const attendance = {
                 },
                 {
                     name: "Neal Brunette",
-                    events: 3
+                    events: 4
                 },
                 {
                     name: "Rich Catalano",
-                    events: 3
+                    events: 4
                 },
                 {
                     name: "Charlie Stewart",
@@ -204,7 +206,7 @@ export const attendance = {
                 },
                 {
                     name: "Bryan DeMatt",
-                    events: 2
+                    events: 3
                 },
                 {
                     name: "John Brozda",
@@ -248,6 +250,115 @@ export const attendance = {
                 },
                 {
                     name: "Max Swartwout",
+                    events: 1
+                },
+                {
+                    name: "Jeff Woods",
+                    events: 1
+                },
+                {
+                    name: "Bulent",
+                    events: 1
+                }
+            ]
+        },
+        {
+            year: 2016,
+            quarter: 3,
+            totalAttendance: 0,
+            winners: [],
+            pickWinners: false,
+            playerList: [
+                {
+                    name: "Joe Z",
+                    events: 2
+                },
+                {
+                    name: "Rich Catalano",
+                    events: 1
+                },
+                {
+                    name: "Coralie Campobasso",
+                    events: 1
+                },
+                {
+                    name: "Max Swartwout",
+                    events: 2
+                },
+                {
+                    name: "Sid Kornberg",
+                    events: 1
+                },
+                {
+                    name: "Ioulia Kornberg",
+                    events: 1
+                },
+                {
+                    name: "Steve Hast",
+                    events: 2
+                },
+                {
+                    name: "Bill Versaw",
+                    events: 2
+                },
+                {
+                    name: "Bud Bowers",
+                    events: 1
+                },
+                {
+                    name: "John Brozda",
+                    events: 2
+                },
+                {
+                    name: "Neal Brunette",
+                    events: 1
+                },
+                {
+                    name: "Carmen Brunette",
+                    events: 1
+                },
+                {
+                    name: "Kristy Stroh",
+                    events: 1
+                },
+                {
+                    name: "Tony P",
+                    events: 1
+                },
+                {
+                    name: "Adam Versaw",
+                    events: 1
+                },
+                {
+                    name: "Bryan DeMatt",
+                    events: 1
+                },
+                {
+                    name: "Aleesha DeMatt",
+                    events: 1
+                },
+                {
+                    name: "Rose McNeilly",
+                    events: 1
+                },
+                {
+                    name: "Scott Turner",
+                    events: 1
+                },
+                {
+                    name: "Joe Davis",
+                    events: 1
+                },
+                {
+                    name: "Becky Ferrer",
+                    events: 1
+                },
+                {
+                    name: "Andy Cornelius",
+                    events: 1
+                },
+                {
+                    name: "Dean DiGregorio",
                     events: 1
                 }
             ]

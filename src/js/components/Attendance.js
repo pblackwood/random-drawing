@@ -1,24 +1,19 @@
-import React, {PropTypes} from "react";
+import React, { PropTypes } from "react";
 
 const Attendance = ({club, stats, onWinnerClick}) => {
-    let winners;
+    let winners, pickWinners;
+    if (stats.pickWinners) {
+        pickWinners =
+            <div>
+                <button onClick={() => onWinnerClick(stats.year, stats.quarter)}>Pick a Winner!</button>
+            </div>
+    }
     if (stats.winners.length) {
         winners =
             <div className="winner">
                 <h3>Winners for this Quarter: {stats.winners.toString()}</h3>
             </div>
     }
-    // TODO - expose the random winner somehow but not on the site
-    // else {
-    //     winners =
-    //         <div>
-    //             <button onClick={() => onWinnerClick(stats.year, stats.quarter)}>Pick a Winner!</button>
-    //             <span className="winner">==></span>
-    //             {stats.winners.map((winner, i) =>
-    //                 <span className="winner" key={i}>{winner}</span>
-    //             )}
-    //         </div>
-    // }
 
     if (stats.playerList.length > 0) {
         return (
@@ -43,6 +38,7 @@ const Attendance = ({club, stats, onWinnerClick}) => {
                     </table>
                 </div>
                 <br />
+                {pickWinners}
                 {winners}
                 <br />
             </div>

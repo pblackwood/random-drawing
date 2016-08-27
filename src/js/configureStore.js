@@ -5,7 +5,8 @@ import { loadState, saveState } from "./utilities/localStorage";
 
 const configureStore = () => {
     const persistedState = loadState();
-    const store = createStore(drawingApp, persistedState, window.devToolsExtension ? window.devToolsExtension() : undefined);
+    // TODO passing undefined because local storage doesn't work for winners
+    const store = createStore(drawingApp, undefined, window.devToolsExtension ? window.devToolsExtension() : undefined);
 
     store.subscribe(throttle(() => {
         saveState(store.getState());
