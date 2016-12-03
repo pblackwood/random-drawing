@@ -4,8 +4,12 @@ import { render } from "react-dom";
 import Root from "./components/Root";
 import configureStore from "./configureStore";
 
+configureFirebase();
+
 render(
     <Root store={configureStore()}/>,
     document.getElementById('attendanceStats')
 )
 
+function configureFirebase() {
+}

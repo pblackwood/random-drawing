@@ -19,6 +19,7 @@
   "homepage": "http://steelcitybg.com",
   "dependencies": {
     "babel-polyfill": "^6.3.14",
+    "firebase": "^3.4.0",
     "jquery": "^2.2.3",
     "lodash": "^4.13.1",
     "react": "^0.14.7",
