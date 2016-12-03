@@ -1,7 +1,5 @@
-import { attendance } from "../attendance";
-
 // The "metadata" represennts the data file (json) itself. To reload a new file, change its version.
-const metadata = (state = attendance.metadata, action) => {
+const metadata = (state = {}, action) => {
     let newState = state;
     switch (action.type) {
         case 'CHANGE_VERSION':
