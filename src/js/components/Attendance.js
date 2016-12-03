@@ -2,20 +2,21 @@ import React, { PropTypes } from "react";
 
 const Attendance = ({club, stats, onWinnerClick}) => {
     let winners, pickWinners;
-    if (stats.pickWinners) {
-        pickWinners =
-            <div>
-                <button onClick={() => onWinnerClick(stats.year, stats.quarter)}>Pick a Winner!</button>
-            </div>
-    }
-    if (stats.winners.length) {
-        winners =
-            <div className="winner col-xs-8 col-xs-offset-2">
-                <h3>Winners for this Quarter: {stats.winners.toString()}</h3>
-            </div>
-    }
+    // TODO reinstate this
+    // if (stats.pickWinners) {
+    //     pickWinners =
+    //         <div>
+    //             <button onClick={() => onWinnerClick(stats.year, stats.quarter)}>Pick a Winner!</button>
+    //         </div>
+    // }
+    // if (stats.winners && stats.winners.length) {
+    //     winners =
+    //         <div className="winner col-xs-8 col-xs-offset-2">
+    //             <h3>Winners for this Quarter: {stats.winners.toString()}</h3>
+    //         </div>
+    // }
 
-    if (stats.playerList.length > 0) {
+    if (stats.playerList && stats.playerList.length > 0) {
         return (
             <div className="attendance row">
                 <h4 className="col-xs-12">Total Events Attended (not including organizers): {stats.totalAttendance}</h4>
@@ -67,7 +68,9 @@ const getSortedPlayerList = (playerList) => {
 
 Attendance.propTypes = {
     club: PropTypes.shape({
-        name: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired
+    }).isRequired,
+    view: PropTypes.shape({
         selectedQuarter: PropTypes.number.isRequired,
         selectedYear: PropTypes.number.isRequired
     }).isRequired,

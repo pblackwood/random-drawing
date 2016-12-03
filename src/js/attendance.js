@@ -1,11 +1,11 @@
-export const DEFAULT_YEAR = 2016;
-export const DEFAULT_QUARTER = 3;
-
 export const attendance = {
+    metadata: {
+        version: "f78b21b3-b03a-48bf-9e5d-73cc4ac0e136"
+    },
     club: {
         name: "Steel City Backgammon",
-        selectedYear: DEFAULT_YEAR,
-        selectedQuarter: DEFAULT_QUARTER
+        location: "Pittsburgh",
+        clubDirector: "Peter Swartwout"
     },
     stats: [
         {

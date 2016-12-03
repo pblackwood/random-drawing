@@ -1,9 +1,10 @@
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 import Header from "../components/Header";
-import {changeQuarter, changeYear} from "../actions";
+import { changeQuarter, changeYear } from "../actions";
 
 const mapStateToProps = (state) => ({
-    club: state.club
+    club: state.club,
+    view: state.view
 });
 
 const mapDispatchToProps = (dispatch) => ({
