@@ -10,17 +10,17 @@ const Attendance = ({club, stats, onWinnerClick}) => {
     }
     if (stats.winners.length) {
         winners =
-            <div className="winner">
+            <div className="winner col-xs-8 col-xs-offset-2">
                 <h3>Winners for this Quarter: {stats.winners.toString()}</h3>
             </div>
     }
 
     if (stats.playerList.length > 0) {
         return (
-            <div className="attendance">
-                <h4>Total Events Attended (not including organizers): {stats.totalAttendance}</h4>
-                <hr />
-                <div className="playerTable">
+            <div className="attendance row">
+                <h4 className="col-xs-12">Total Events Attended (not including organizers): {stats.totalAttendance}</h4>
+                <hr className="col-xs-8 col-xs-offset-2"/>
+                <div className="playerTable col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
                     <table className="p">
                         <tbody>
                         <tr>

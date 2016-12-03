@@ -153,8 +153,8 @@ export const attendance = {
             year: 2016,
             quarter: 2,
             totalAttendance: 0,
-            winners: [],
-            pickWinners: true,
+            winners: ["Kristy Stroh", "Neal Brunette"],
+            pickWinners: false,
             playerList: [
                 {
                     name: "Jean Cronyn",
