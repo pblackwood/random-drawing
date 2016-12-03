@@ -1,6 +1,4 @@
-import { attendance } from "../attendance";
-
-const club = (state = attendance.club, action) => {
+const club = (state = {}, action) => {
     let newState = state;
     switch (action.type) {
     }

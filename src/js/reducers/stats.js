@@ -1,5 +1,16 @@
-import { attendance } from "../attendance";
+const stats = (state = {}, action) => {
+    let newState = state;
+    switch (action.type) {
+        case 'PICK_WINNER':
+            // TODO, no longer working after change to stats state
+            let winner = pickWinner(state);
+            newState = Object.assign({}, state, {winners: [...state.winners, winner]});
+            break;
+    }
+    return newState;
+}
 
+// TODO, no longer working
 const pickWinner = (stats) => {
     let players = [];
     stats.playerList.forEach(p => {
@@ -12,18 +23,6 @@ const pickWinner = (stats) => {
     window.crypto.getRandomValues(nums);
     let index = Math.floor(Math.random() * 101);
     return players[nums[index] % players.length];
-}
-
-const stats = (state = attendance.stats, action) => {
-    let newState = state;
-    switch (action.type) {
-        case 'PICK_WINNER':
-            // TODO, no longer working after change to stats state
-            let winner = pickWinner(state);
-            newState = Object.assign({}, state, {winners: [...state.winners, winner]});
-            break;
-    }
-    return newState;
 }
 
 export default stats

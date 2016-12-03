@@ -9,12 +9,12 @@ const Attendance = ({club, stats, onWinnerClick}) => {
     //             <button onClick={() => onWinnerClick(stats.year, stats.quarter)}>Pick a Winner!</button>
     //         </div>
     // }
-    // if (stats.winners && stats.winners.length) {
-    //     winners =
-    //         <div className="winner col-xs-8 col-xs-offset-2">
-    //             <h3>Winners for this Quarter: {stats.winners.toString()}</h3>
-    //         </div>
-    // }
+    if (stats.winners && stats.winners.length) {
+        winners =
+            <div className="winner col-xs-8 col-xs-offset-2">
+                <h3>Winners for this Quarter: {stats.winners.toString()}</h3>
+            </div>
+    }
 
     if (stats.playerList && stats.playerList.length > 0) {
         return (
