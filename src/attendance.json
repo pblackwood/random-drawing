@@ -1,11 +1,58 @@
 {
   "metadata": {
-    "version": "8ae359b8-aa74-4e26-92a4-5823db4b2b36"
+    "version": "8ae359b8-aa74-4e26-92a4-5823db4b2b35"
   },
   "club": {
     "name": "Steel City Backgammon",
     "location": "Pittsburgh",
-    "director": "Peter Swartwout"
+    "director": "Peter Swartwout",
+    "players": [
+      {
+        "id": 1,
+        "first": "Peter",
+        "last": "Swartwout"
+      },
+      {
+        "id": 2,
+        "first": "Jason",
+        "last": "Kirin"
+      },
+      {
+        "id": 3,
+        "first": "Bill",
+        "last": "Versaw"
+      },
+      {
+        "id": 4,
+        "first": "Steve",
+        "last": "Hast"
+      },
+      {
+        "id": 5,
+        "first": "Adam",
+        "last": "Versaw"
+      },
+      {
+        "id": 6,
+        "first": "John",
+        "last": "Brozda"
+      },
+      {
+        "id": 7,
+        "first": "Adam",
+        "last": "Brozda"
+      },
+      {
+        "id": 8,
+        "first": "Scott",
+        "last": "Turner"
+      },
+      {
+        "id": 9,
+        "first": "Joe",
+        "last": "Davis"
+      }
+    ]
   },
   "stats": [
     {

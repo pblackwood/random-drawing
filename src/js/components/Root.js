@@ -8,17 +8,4 @@ const Root = ({store}) => (
     </Provider>
 );
 
-// Use this to bring in React Router
-// const Root = ({store}) => (
-//     <Provider store={store}>
-//         <Router history={browserHistory}>
-//             <Route path="/stats.html" component={App}/>
-//         </Router>
-//     </Provider>
-// );
-
-Root.propTypes = {
-    store: PropTypes.object.isRequired
-};
-
 export default Root;
