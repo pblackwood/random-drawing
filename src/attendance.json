@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "version": "a024682e-8418-4d90-b47e-5f03d01bbf85"
+    "version": "8ae359b8-aa74-4e26-92a4-5823db4b2b36"
   },
   "club": {
     "name": "Steel City Backgammon",
@@ -273,55 +273,75 @@
       "pickWinners": false,
       "playerList": [
         {
-          "name": "Joe Z",
-          "events": 2
-        },
-        {
-          "name": "Rich Catalano",
-          "events": 1
-        },
-        {
-          "name": "Coralie Campobasso",
-          "events": 1
-        },
-        {
-          "name": "Max Swartwout",
-          "events": 2
-        },
-        {
-          "name": "Sid Kornberg",
-          "events": 1
-        },
-        {
-          "name": "Ioulia Kornberg",
-          "events": 1
-        },
-        {
-          "name": "Steve Hast",
-          "events": 2
-        },
-        {
-          "name": "Bill Versaw",
-          "events": 2
-        },
-        {
-          "name": "Bud Bowers",
-          "events": 1
-        },
-        {
           "name": "John Brozda",
           "events": 2
         },
         {
           "name": "Neal Brunette",
-          "events": 1
+          "events": 2
         },
         {
           "name": "Carmen Brunette",
+          "events": 2
+        },
+        {
+          "name": "Bud Bowers",
+          "events": 2
+        },
+        {
+          "name": "Coralie Campobasso",
+          "events": 2
+        },
+        {
+          "name": "Rich Catalano",
+          "events": 2
+        },
+        {
+          "name": "Andy Cornelius",
           "events": 1
         },
         {
-          "name": "Kristy Stroh",
+          "name": "Dean DiGregorio",
+          "events": 2
+        },
+        {
+          "name": "Joe Davis",
+          "events": 1
+        },
+        {
+          "name": "Bryan DeMatt",
+          "events": 2
+        },
+        {
+          "name": "Aleesha DeMatt",
+          "events": 2
+        },
+        {
+          "name": "Becky Ferrer",
+          "events": 1
+        },
+        {
+          "name": "Steve Hast",
+          "events": 3
+        },
+        {
+          "name": "Sid Kornberg",
+          "events": 2
+        },
+        {
+          "name": "Ioulia Kornberg",
+          "events": 2
+        },
+        {
+          "name": "Ken Lazarr",
+          "events": 1
+        },
+        {
+          "name": "Rose McNeilly",
+          "events": 1
+        },
+        {
+          "name": "Tom Moody",
           "events": 1
         },
         {
@@ -329,7 +349,63 @@
           "events": 1
         },
         {
+          "name": "Kristy Stroh",
+          "events": 1
+        },
+        {
+          "name": "Max Swartwout",
+          "events": 2
+        },
+        {
+          "name": "Scott Turner",
+          "events": 1
+        },
+        {
           "name": "Adam Versaw",
+          "events": 1
+        },
+        {
+          "name": "Bill Versaw",
+          "events": 2
+        },
+        {
+          "name": "Joe Zipper",
+          "events": 4
+        }
+      ]
+    },
+    {
+      "year": 2016,
+      "quarter": 4,
+      "winners": [],
+      "pickWinners": false,
+      "playerList": [
+        {
+          "name": "John Brozda",
+          "events": 1
+        },
+        {
+          "name": "Neal Brunette",
+          "events": 3
+        },
+        {
+          "name": "Carmen Brunette",
+          "events": 2
+        },
+        {
+          "name": "Melanie B",
+          "events": 1
+        },
+        {
+          "name": "Rich Catalano",
+          "events": 1
+        },
+        {
+          "name": "Andy Cornelius",
+          "events": 1
+        },
+        {
+          "name": "Dean DiGregorio",
           "events": 1
         },
         {
@@ -341,7 +417,39 @@
           "events": 1
         },
         {
-          "name": "Rose McNeilly",
+          "name": "Becky Ferrer",
+          "events": 1
+        },
+        {
+          "name": "Steve Hast",
+          "events": 1
+        },
+        {
+          "name": "Kate Luckett",
+          "events": 1
+        },
+        {
+          "name": "Sean Montgomery",
+          "events": 2
+        },
+        {
+          "name": "Tom Moody",
+          "events": 1
+        },
+        {
+          "name": "Patti Morris",
+          "events": 1
+        },
+        {
+          "name": "Dave Ostroke",
+          "events": 1
+        },
+        {
+          "name": "Nick Papageorgiou",
+          "events": 1
+        },
+        {
+          "name": "Kristy Stroh",
           "events": 1
         },
         {
@@ -349,29 +457,17 @@
           "events": 1
         },
         {
-          "name": "Joe Davis",
+          "name": "Adam Versaw",
           "events": 1
         },
         {
-          "name": "Becky Ferrer",
+          "name": "Bill Versaw",
           "events": 1
         },
         {
-          "name": "Andy Cornelius",
-          "events": 1
-        },
-        {
-          "name": "Dean DiGregorio",
+          "name": "Joe Zipper",
           "events": 1
         }
-      ]
-    },
-    {
-      "year": 2016,
-      "quarter": 4,
-      "winners": [],
-      "pickWinners": false,
-      "playerList": [
       ]
     }
   ]
