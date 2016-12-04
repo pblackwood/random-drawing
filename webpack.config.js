@@ -3,11 +3,12 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        app: ['./src/js/index.js']
+        app: './src/js/index.js',
+        admin: './src/js/admin.js'
     },
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: 'bundle.js',
+        filename: '[name].entry.js',
         publicPath: '/'
     },
     devServer: {
