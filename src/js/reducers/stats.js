@@ -1,10 +1,14 @@
-const stats = (state = {}, action) => {
+const stats = (state = [], action) => {
     let newState = state;
     switch (action.type) {
         case 'PICK_WINNER':
             // TODO, no longer working after change to stats state
             let winner = pickWinner(state);
-            newState = Object.assign({}, state, {winners: [...state.winners, winner]});
+            newState = Object.assign([], state, {winners: [...state.winners, winner]});
+            break;
+        case 'RECEIVE_ATTENDANCE_STATS':
+            // New JSON has arrived from the API
+            newState = Object.assign([], state, action.attendance.stats);
             break;
     }
     return newState;

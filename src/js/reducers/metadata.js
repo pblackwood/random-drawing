@@ -1,4 +1,4 @@
-// The "metadata" represennts the data file (json) itself. To reload a new file, change its version.
+// The "metadata" represents the data file itself. (json).
 const metadata = (state = {}, action) => {
     let newState = state;
     switch (action.type) {
@@ -6,6 +6,10 @@ const metadata = (state = {}, action) => {
             newState = Object.assign({}, state, {
                 version: action.version
             });
+            break;
+        case 'RECEIVE_ATTENDANCE_STATS':
+            // New JSON has arrived from the API
+            newState = Object.assign({}, state, action.attendance.metadata);
             break;
     }
     return newState;
