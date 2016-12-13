@@ -31,14 +31,18 @@ export const requestAttendanceStats = () => (
         // The function called by the thunk middleware can return a value,
         // that is passed on as the return value of the dispatch method.
         // In this case, we return a promise to wait for.
-        return request.get('/api/attendance.json').then(
-            (response) => {
-                dispatch(receiveAttendanceStats(response.body))
-            },
-            (reason) => {
-                console.log("Attendance Stats rejected for reason: " + reason)
-            }
-        )
+        return request.get('/api/attendance.json')
+            .accept('json')
+            .then(
+                (response) => {
+                    // This should work but when deployed onto Pair, body is always undefined
+                    // dispatch(receiveAttendanceStats(response.body))
+                    dispatch(receiveAttendanceStats(JSON.parse(response.text)))
+                },
+                (reason) => {
+                    console.log("Attendance Stats rejected for reason: " + reason)
+                }
+            )
     }
 );
 
