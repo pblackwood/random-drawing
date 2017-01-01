@@ -1,11 +1,19 @@
 import React, { PropTypes } from "react";
 import * as Table from "reactabular-table";
 
-const EventListRedux = ({rows, columns}) => {
+const EventListRedux = ({rows, columns, createEvent}) => {
 
     if (rows && rows.length > 0) {
         return (
             <div >
+                <button type="button"
+                        className="pure-button pure-button-primary event-button"
+                        onClick={e => {
+                            e.preventDefault();
+                            createEvent();
+                        }}>
+                    Add Event
+                </button>
                 <Table.Provider
                     className="pure-table pure-table-striped"
                     columns={columns}>
