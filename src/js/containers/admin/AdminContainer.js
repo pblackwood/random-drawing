@@ -1,6 +1,5 @@
 import { connect } from "react-redux";
-import { pickWinner } from "../actions";
-import Admin from "../components/Admin";
+import Admin from "../../components/admin/Admin";
 
 const mapStateToProps = (state) => ({
     club: state.club,
@@ -10,11 +9,12 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    onWinnerClick (year, quarter) {
-        dispatch(pickWinner(year, quarter))
-    }
+    // onWinnerClick (year, quarter) {
+    //     dispatch(pickWinner(year, quarter))
+    // }
 });
 
 const AdminContainer = connect(mapStateToProps, mapDispatchToProps)(Admin);
 
 export default AdminContainer
+
