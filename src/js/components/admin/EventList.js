@@ -1,44 +1,26 @@
 import React, { PropTypes } from "react";
 import * as Table from "reactabular-table";
 
-const EventList = ({events}) => {
+const EventListRedux = ({rows, columns, createEvent}) => {
 
-    if (events && events.length > 0) {
+    if (rows && rows.length > 0) {
         return (
-            <Table
-                rowsCount={events.length}
-                rowHeight={30}
-                headerHeight={30}
-                width={500}
-                maxHeight={500}>
-                <Column
-                    header={<Cell>When</Cell>}
-                    width={150}
-                    cell={props => (
-                        <Cell {...props}>
-                            {events[props.rowIndex]['date']}
-                        </Cell>
-                    )}
-                />
-                <Column
-                    header={<Cell>What</Cell>}
-                    width={250}
-                    cell={props => (
-                        <Cell {...props}>
-                            {events[props.rowIndex]['name']}
-                        </Cell>
-                    )}
-                />
-                <Column
-                    header={<Cell>Attendees</Cell>}
-                    width={100}
-                    cell={props => (
-                        <Cell {...props}>
-                            {events[props.rowIndex]['attendees']}
-                        </Cell>
-                    )}
-                />
-            </Table>
+            <div >
+                <button type="button"
+                        className="pure-button pure-button-primary event-button"
+                        onClick={e => {
+                            e.preventDefault();
+                            createEvent();
+                        }}>
+                    Add Event
+                </button>
+                <Table.Provider
+                    className="pure-table pure-table-striped"
+                    columns={columns}>
+                    <Table.Header />
+                    <Table.Body rows={rows} rowKey="id"/>
+                </Table.Provider>
+            </div>
         )
     }
     else {
@@ -50,14 +32,4 @@ const EventList = ({events}) => {
     }
 };
 
-export default EventList;
-//
-// "events": [
-//     {
-//         "id": 101,
-//         "name": "Biddle's Escape from the Ordinary",
-//         "locationId": 1,
-//         "date": "2016-12-05",
-//         "attendees": 0
-//     },
-//
+export default EventListRedux;

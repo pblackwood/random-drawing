@@ -1,5 +1,5 @@
 import React, { PropTypes } from "react";
-import EventListRedux from "./EventListRedux";
+import EventList from "./EventList";
 
 const EventEditor = ({club, createEvent}) => {
 
@@ -7,7 +7,7 @@ const EventEditor = ({club, createEvent}) => {
         <div >
             <h2 >Events</h2>
             <div className="event-list">
-                <EventListRedux
+                <EventList
                     rows={club.events}
                     columns={columnModel()}
                     createEvent={createEvent}
