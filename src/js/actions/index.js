@@ -59,20 +59,21 @@ export const createEvent = () => ({
     }
 });
 
-export const deleteEvent = (id) => ({
-    type: 'DELETE_EVENT',
-    id
-});
-
 export const editEvent = (id, columnIndex) => ({
     type: 'EDIT_EVENT',
     id,
     columnIndex
 });
 
-export const commitEditEvent = (id, property, value) => ({
-    type: 'COMMIT_EDIT_EVENT',
+export const saveEvent = (id, property, value) => ({
+    type: 'SAVE_EVENT',
     id,
     property,
     value
 });
+
+export const deleteEvent = (id) => ({
+    type: 'DELETE_EVENT',
+    id
+});
+

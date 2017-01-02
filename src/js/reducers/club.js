@@ -35,7 +35,7 @@ const club = (state = {}, action) => {
             }
             break;
 
-        case 'COMMIT_EDIT_EVENT':
+        case 'SAVE_EVENT':
             index = findIndex(state.events, {id: action.id});
             if (index >= 0) {
                 newState = Object.assign({}, state, {

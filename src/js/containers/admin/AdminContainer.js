@@ -10,17 +10,19 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    onCreateEvent () {
-        dispatch(actions.createEvent())
-    },
-    onDeleteEvent (id) {
-        dispatch(actions.deleteEvent(id))
-    },
-    onEditEvent (id, columnIndex) {
-        dispatch(actions.editEvent(id, columnIndex))
-    },
-    onCommitEditEvent (id, property, value) {
-        dispatch(actions.commitEditEvent(id, property, value))
+    eventEvents: {
+        onCreate: () => {
+            dispatch(actions.createEvent())
+        },
+        onEdit: (id, columnIndex) => {
+            dispatch(actions.editEvent(id, columnIndex))
+        },
+        onSave: (id, property, value) => {
+            dispatch(actions.saveEvent(id, property, value))
+        },
+        onDelete: (id) => {
+            dispatch(actions.deleteEvent(id))
+        }
     }
 });
 
