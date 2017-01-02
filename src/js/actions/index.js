@@ -64,12 +64,15 @@ export const deleteEvent = (id) => ({
     id
 });
 
-export const editEvent = (columnIndex, id) => ({
+export const editEvent = (id, columnIndex) => ({
     type: 'EDIT_EVENT',
-    row: {columnIndex, id}
+    id,
+    columnIndex
 });
 
-export const confirmEdit = (property, value, id) => ({
-    type: 'CONFIRM_EDIT',
-    row: {property, value, id}
+export const commitEditEvent = (id, property, value) => ({
+    type: 'COMMIT_EDIT_EVENT',
+    id,
+    property,
+    value
 });

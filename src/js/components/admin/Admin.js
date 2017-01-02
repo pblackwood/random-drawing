@@ -1,7 +1,7 @@
-import React, { PropTypes } from "react";
+import React from "react";
 import EventEditor from "./EventEditor";
 
-const Admin = ({club, onCreateEvent, onDeleteEvent}) => {
+const Admin = ({club, onCreateEvent, onDeleteEvent, onEditEvent, onCommitEditEvent}) => {
 
     return (
         <div className="admin row">
@@ -10,6 +10,8 @@ const Admin = ({club, onCreateEvent, onDeleteEvent}) => {
                     club={club}
                     createEvent={onCreateEvent}
                     deleteEvent={onDeleteEvent}
+                    editEvent={onEditEvent}
+                    commitEditEvent={onCommitEditEvent}
                 />
             </div>
             <div className="attendance col-xs-6">

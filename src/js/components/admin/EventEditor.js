@@ -1,7 +1,9 @@
 import React, { PropTypes } from "react";
 import EventList from "./EventList";
+import * as edit from "react-edit";
+import { editEvent } from "../../actions";
 
-const EventEditor = ({club, createEvent, deleteEvent}) => {
+const EventEditor = ({club, createEvent, editEvent, commitEditEvent, deleteEvent}) => {
 
     return (
         <div >
@@ -9,26 +11,27 @@ const EventEditor = ({club, createEvent, deleteEvent}) => {
             <div className="event-list">
                 <EventList
                     rows={club.events}
-                    columns={columnModel(deleteEvent)}
+                    columns={columnModel(editEvent, commitEditEvent, deleteEvent)}
                     createEvent={createEvent}
-                    deleteEvent={deleteEvent}
                 />
             </div>
         </div>
     )
 };
 
-// const editable = edit.edit({
-//     isEditing: (columnIndex, rowData) => columnIndex === rowData.editing,
-//     onActivate: (columnIndex, rowData) => {
-//         this.props.editRow(columnIndex, rowData.id);
-//     },
-//     onValue: ({value, rowData, property}) => {
-//         this.props.confirmEdit(property, value, rowData.id);
-//     }
-// });
+const editable = (editEvent, commitEditEvent) => {
+    return edit.edit({
+        isEditing: ({columnIndex, rowData}) => columnIndex === rowData.editing,
+        onActivate: ({columnIndex, rowData}) => {
+            editEvent(rowData.id, columnIndex);
+        },
+        onValue: ({value, rowData, property}) => {
+            commitEditEvent(rowData.id, property, value);
+        }
+    })
+}
 
-const columnModel = (deleteEvent) => (
+const columnModel = (editEvent, commitEditEvent, deleteEvent) => (
     [
         {
             property: 'name',
@@ -36,8 +39,9 @@ const columnModel = (deleteEvent) => (
                 label: 'What'
             },
             cell: {
-                property: 'name'
-                // transforms: [editable(edit.input())]
+                transforms: [
+                    editable(editEvent, commitEditEvent)(edit.input())
+                ]
             }
         },
         {
@@ -81,7 +85,6 @@ const columnModel = (deleteEvent) => (
         }
     ]
 )
-
 
 export default EventEditor;
 

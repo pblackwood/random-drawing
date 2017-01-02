@@ -2,6 +2,7 @@ import { findIndex } from "lodash";
 
 const club = (state = {}, action) => {
     let newState = state;
+    let index;
     switch (action.type) {
         case 'RECEIVE_ATTENDANCE_STATS':
             // New JSON has arrived from the API
@@ -13,7 +14,7 @@ const club = (state = {}, action) => {
             break;
 
         case 'DELETE_EVENT':
-            let index = findIndex(state.events, {id: action.id});
+            index = findIndex(state.events, {id: action.id});
             if (index >= 0) {
                 newState = Object.assign({}, state, {
                     events: state.events.slice(0, index).concat(state.events.slice(index + 1))
@@ -21,34 +22,34 @@ const club = (state = {}, action) => {
             }
             break;
 
-        // case 'EDIT_EVENT':
-        //     if (index >= 0) {
-        //         return editProperty(state, index, {
-        //             editing: row.columnIndex
-        //         });
-        //     }
-        //     break;
-        //
-        // case 'CONFIRM_EDIT':
-        //     if (index >= 0) {
-        //         return editProperty(state, index, {
-        //             [row.property]: row.value,
-        //             editing: false
-        //         });
-        //     }
+        case 'EDIT_EVENT':
+            index = findIndex(state.events, {id: action.id});
+            if (index >= 0) {
+                newState = Object.assign({}, state, {
+                    events: state.events.slice(0, index)
+                        .concat(Object.assign({}, state.events[index], {
+                            editing: action.columnIndex
+                        }))
+                        .concat(state.events.slice(index + 1))
+                })
+            }
+            break;
+
+        case 'COMMIT_EDIT_EVENT':
+            index = findIndex(state.events, {id: action.id});
+            if (index >= 0) {
+                newState = Object.assign({}, state, {
+                    events: state.events.slice(0, index)
+                        .concat(Object.assign({}, state.events[index], {
+                            [action.property]: action.value,
+                            editing: false
+                        }))
+                        .concat(state.events.slice(index + 1))
+                })
+            }
 
     }
     return newState;
 }
-
-// const editProperty = (rows, index, values) => {
-//     const ret = cloneDeep(rows);
-//
-//     Object.keys(values).forEach(v => {
-//         ret[index][v] = values[v];
-//     });
-//
-//     return ret;
-// }
 
 export default club

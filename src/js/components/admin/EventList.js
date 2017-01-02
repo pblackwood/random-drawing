@@ -1,7 +1,7 @@
-import React, { PropTypes } from "react";
+import React from "react";
 import * as Table from "reactabular-table";
 
-const EventListRedux = ({rows, columns, createEvent, deleteEvent}) => {
+const EventList = ({rows, columns, createEvent}) => {
 
     if (rows && rows.length > 0) {
         return (
@@ -32,4 +32,4 @@ const EventListRedux = ({rows, columns, createEvent, deleteEvent}) => {
     }
 };
 
-export default EventListRedux;
+export default EventList;
