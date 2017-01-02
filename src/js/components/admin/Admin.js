@@ -1,7 +1,7 @@
 import React, { PropTypes } from "react";
 import EventEditor from "./EventEditor";
 
-const Admin = ({club, onCreateEvent, metadata, view, stats}) => {
+const Admin = ({club, onCreateEvent, onDeleteEvent}) => {
 
     return (
         <div className="admin row">
@@ -9,6 +9,7 @@ const Admin = ({club, onCreateEvent, metadata, view, stats}) => {
                 <EventEditor
                     club={club}
                     createEvent={onCreateEvent}
+                    deleteEvent={onDeleteEvent}
                 />
             </div>
             <div className="attendance col-xs-6">

@@ -1,3 +1,5 @@
+import { findIndex } from "lodash";
+
 const club = (state = {}, action) => {
     let newState = state;
     switch (action.type) {
@@ -10,17 +12,22 @@ const club = (state = {}, action) => {
             newState = Object.assign({}, state, {events: [action.event].concat(state.events)});
             break;
 
-        // case 'DELETE_EVENT':
-        //     if (index >= 0) {
-        //         return state.slice(0, index).concat(state.slice(index + 1));
-        //     }
-        //
+        case 'DELETE_EVENT':
+            let index = findIndex(state.events, {id: action.id});
+            if (index >= 0) {
+                newState = Object.assign({}, state, {
+                    events: state.events.slice(0, index).concat(state.events.slice(index + 1))
+                })
+            }
+            break;
+
         // case 'EDIT_EVENT':
         //     if (index >= 0) {
         //         return editProperty(state, index, {
         //             editing: row.columnIndex
         //         });
         //     }
+        //     break;
         //
         // case 'CONFIRM_EDIT':
         //     if (index >= 0) {
@@ -33,5 +40,15 @@ const club = (state = {}, action) => {
     }
     return newState;
 }
+
+// const editProperty = (rows, index, values) => {
+//     const ret = cloneDeep(rows);
+//
+//     Object.keys(values).forEach(v => {
+//         ret[index][v] = values[v];
+//     });
+//
+//     return ret;
+// }
 
 export default club

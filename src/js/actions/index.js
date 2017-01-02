@@ -61,7 +61,7 @@ export const createEvent = () => ({
 
 export const deleteEvent = (id) => ({
     type: 'DELETE_EVENT',
-    event: {id}
+    id
 });
 
 export const editEvent = (columnIndex, id) => ({

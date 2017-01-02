@@ -1,7 +1,7 @@
 import React, { PropTypes } from "react";
 import EventList from "./EventList";
 
-const EventEditor = ({club, createEvent}) => {
+const EventEditor = ({club, createEvent, deleteEvent}) => {
 
     return (
         <div >
@@ -9,8 +9,9 @@ const EventEditor = ({club, createEvent}) => {
             <div className="event-list">
                 <EventList
                     rows={club.events}
-                    columns={columnModel()}
+                    columns={columnModel(deleteEvent)}
                     createEvent={createEvent}
+                    deleteEvent={deleteEvent}
                 />
             </div>
         </div>
@@ -27,7 +28,7 @@ const EventEditor = ({club, createEvent}) => {
 //     }
 // });
 
-const columnModel = () => (
+const columnModel = (deleteEvent) => (
     [
         {
             property: 'name',
@@ -55,6 +56,27 @@ const columnModel = () => (
             },
             cell: {
                 property: 'attendees'
+            }
+        },
+        {
+            props: {
+                style: {
+                    width: 25
+                }
+            },
+            cell: {
+                formatters: [
+                    (value, {rowData}) => (
+                        <span
+                            className="remove"
+                            title="Delete Event"
+                            onClick={() => deleteEvent(rowData.id)}
+                            style={{cursor: 'pointer'}}
+                        >
+                            &#10008;
+                        </span>
+                    )
+                ]
             }
         }
     ]

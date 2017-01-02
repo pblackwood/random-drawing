@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { createEvent } from "../../actions";
+import { createEvent, deleteEvent } from "../../actions";
 import Admin from "../../components/admin/Admin";
 
 const mapStateToProps = (state) => ({
@@ -12,6 +12,9 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
     onCreateEvent () {
         dispatch(createEvent())
+    },
+    onDeleteEvent (id) {
+        dispatch(deleteEvent(id))
     }
 });
 

@@ -1,7 +1,7 @@
 import React, { PropTypes } from "react";
 import * as Table from "reactabular-table";
 
-const EventListRedux = ({rows, columns, createEvent}) => {
+const EventListRedux = ({rows, columns, createEvent, deleteEvent}) => {
 
     if (rows && rows.length > 0) {
         return (
