@@ -1,4 +1,6 @@
 import request from "superagent";
+import uuid from "uuid";
+import moment from "moment";
 
 export const pickWinner = (year, quarter) => ({
     type: 'PICK_WINNER',
@@ -45,4 +47,33 @@ export const requestAttendanceStats = () => (
             )
     }
 );
+
+export const createEvent = () => ({
+    type: 'CREATE_EVENT',
+    event: {
+        id: uuid.v4(),
+        name: "New Event",
+        location: 1,
+        date: moment().format('YYYY-MM-DD'),
+        attendees: 0
+    }
+});
+
+export const editEvent = (id, columnIndex) => ({
+    type: 'EDIT_EVENT',
+    id,
+    columnIndex
+});
+
+export const saveEvent = (id, property, value) => ({
+    type: 'SAVE_EVENT',
+    id,
+    property,
+    value
+});
+
+export const deleteEvent = (id) => ({
+    type: 'DELETE_EVENT',
+    id
+});
 
