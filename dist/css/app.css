@@ -68,3 +68,16 @@
 .event-button {
     margin-bottom: 5px;
 }
+
+.nav {
+    padding: 10px 10px 0;
+}
+
+.is-visible {
+    border: solid 1px red;
+}
+
+section {
+    margin: 20px;
+}
+

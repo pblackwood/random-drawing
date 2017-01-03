@@ -77,3 +77,7 @@ export const deleteEvent = (id) => ({
     id
 });
 
+export const changeAdminTab = (id) => ({
+    type: 'CHANGE_ADMIN_TAB',
+    id
+});

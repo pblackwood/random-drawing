@@ -10,6 +10,9 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
+    changeTab: (id) => {
+        dispatch(actions.changeAdminTab(id))
+    },
     eventEvents: {
         onCreate: () => {
             dispatch(actions.createEvent())

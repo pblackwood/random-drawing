@@ -2,10 +2,17 @@ import React, { PropTypes } from "react";
 import EventList from "./EventList";
 import * as edit from "react-edit";
 
-const EventEditor = ({club, editorActions}) => {
+const EventEditor = ({club, editorEvents}) => {
+
+    const editorActions = {
+        create: editorEvents.onCreate,
+        edit: editorEvents.onEdit,
+        save: editorEvents.onSave,
+        delete: editorEvents.onDelete
+    }
 
     return (
-        <div >
+        <div className="events col-xs-6">
             <h2 >Events</h2>
             <div className="event-list">
                 <EventList
@@ -49,7 +56,9 @@ const columnModel = (editorActions) => (
                 label: 'When'
             },
             cell: {
-                property: 'date'
+                transforms: [
+                    editable(editorActions)(edit.input())
+                ]
             }
         },
         {
