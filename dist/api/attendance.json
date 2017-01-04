@@ -52,6 +52,39 @@
         "first": "Joe",
         "last": "Davis"
       }
+    ],
+    "locations": [
+      {
+        "id": "abc",
+        "name": "Biddle's Escape",
+        "street1": "401 Biddle Ave",
+        "street2": "",
+        "city": "Pittsburgh",
+        "state": "PA",
+        "zip": "15222",
+        "phone1": "412-123-4567",
+        "phone2": ""
+      },
+      {
+        "id": "def",
+        "name": "Duke's Ribs",
+        "street1": "1401 Cochran Rd",
+        "street2": "",
+        "city": "Pittsburgh",
+        "state": "PA",
+        "zip": "15228",
+        "phone1": "412-123-4567",
+        "phone2": ""
+      }
+    ],
+    "events": [
+      {
+        "id": "fred",
+        "name": "Biddle's Escape from the Ordinary",
+        "location": 1,
+        "date": "2017-01-02",
+        "attendees": 10
+      }
     ]
   },
   "stats": [
