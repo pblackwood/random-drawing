@@ -55,7 +55,7 @@
     ],
     "locations": [
       {
-        "id": "abc",
+        "id": "b91c9fa8-0f44-47c2-9c67-5aacc4733349",
         "name": "Biddle's Escape",
         "street1": "401 Biddle Ave",
         "street2": "",
@@ -66,23 +66,30 @@
         "phone2": ""
       },
       {
-        "id": "def",
-        "name": "Duke's Ribs",
-        "street1": "1401 Cochran Rd",
-        "street2": "",
+        "id": "d4a17aeb-8ac7-4e8c-a6cd-1fbaf55ab412",
+        "name": "Duke's Rib House & Grille",
+        "street1": "1910 Cochran Rd",
+        "street2": "Manor Oak II",
         "city": "Pittsburgh",
         "state": "PA",
-        "zip": "15228",
+        "zip": "15220",
         "phone1": "412-123-4567",
         "phone2": ""
       }
     ],
     "events": [
       {
-        "id": "fred",
+        "id": "015f7573-66e9-48b3-9d78-d2d1b2d3ccbc",
         "name": "Biddle's Escape from the Ordinary",
-        "location": 1,
+        "location": "b91c9fa8-0f44-47c2-9c67-5aacc4733349",
         "date": "2017-01-02",
+        "attendees": 10
+      },
+      {
+        "id": "5d13fb51-9b54-4dea-95cd-3398010759c6",
+        "name": "Backgammon & Ribs",
+        "location": "d4a17aeb-8ac7-4e8c-a6cd-1fbaf55ab412",
+        "date": "2017-01-10",
         "attendees": 10
       }
     ]

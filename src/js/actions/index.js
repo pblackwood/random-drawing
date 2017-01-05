@@ -53,7 +53,7 @@ export const createEvent = () => ({
     event: {
         id: uuid.v4(),
         name: "New Event",
-        location: 1,
+        location: "Select Location",
         date: moment().format('YYYY-MM-DD'),
         attendees: 0
     }
@@ -74,6 +74,39 @@ export const saveEvent = (id, property, value) => ({
 
 export const deleteEvent = (id) => ({
     type: 'DELETE_EVENT',
+    id
+});
+
+export const createLocation = () => ({
+    type: 'CREATE_LOCATION',
+    location: {
+        id: uuid.v4(),
+        name: "New Location",
+        street1: "123 Main St",
+        street2: "",
+        city: "Pittsburgh",
+        state: "PA",
+        zip: "15000",
+        phone1: "412-123-4567",
+        phone2: ""
+    }
+});
+
+export const editLocation = (id, columnIndex) => ({
+    type: 'EDIT_LOCATION',
+    id,
+    columnIndex
+});
+
+export const saveLocation = (id, property, value) => ({
+    type: 'SAVE_LOCATION',
+    id,
+    property,
+    value
+});
+
+export const deleteLocation = (id) => ({
+    type: 'DELETE_LOCATION',
     id
 });
 

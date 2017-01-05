@@ -1,9 +1,8 @@
 import React, { PropTypes } from "react";
-import EventList from "./EventList";
+import LocationList from "./LocationList";
 import * as edit from "react-edit";
-import { find } from "lodash";
 
-const EventEditor = ({club, editorEvents}) => {
+const LocationEditor = ({club, editorEvents}) => {
 
     const editorActions = {
         create: editorEvents.onCreate,
@@ -12,14 +11,12 @@ const EventEditor = ({club, editorEvents}) => {
         delete: editorEvents.onDelete
     }
 
-    const locations = club.locations ? club.locations.map((loc) => ({value: loc.id, name: loc.name})) : []
-
     return (
-        <div className="event-list">
-            <EventList
-                rows={club.events}
-                columns={columnModel(editorActions, locations)}
-                createEvent={editorActions.create}
+        <div className="location-list">
+            <LocationList
+                rows={club.locations}
+                columns={columnModel(editorActions)}
+                createLocation={editorActions.create}
             />
         </div>
     )
@@ -37,12 +34,12 @@ const editable = (editorActions) => {
     })
 }
 
-const columnModel = (editorActions, locations) => (
+const columnModel = (editorActions) => (
     [
         {
             property: 'name',
             header: {
-                label: 'What'
+                label: 'Name'
             },
             cell: {
                 transforms: [
@@ -51,9 +48,9 @@ const columnModel = (editorActions, locations) => (
             }
         },
         {
-            property: 'date',
+            property: 'street1',
             header: {
-                label: 'When'
+                label: 'Street'
             },
             cell: {
                 transforms: [
@@ -62,29 +59,69 @@ const columnModel = (editorActions, locations) => (
             }
         },
         {
-            property: 'location',
+            property: 'street2',
             header: {
-                label: 'Where'
+                label: 'Street 2'
             },
             cell: {
                 transforms: [
-                    editable(editorActions)(edit.dropdown({options: locations}))
-                ],
-                formatters: [
-                    (v) => {
-                        let loc = find(locations, {value: v});
-                        return loc ? loc.name : v
-                    }
+                    editable(editorActions)(edit.input())
                 ]
             }
         },
         {
-            property: 'attendees',
+            property: 'city',
             header: {
-                label: 'How Many'
+                label: 'City'
             },
             cell: {
-                property: 'attendees'
+                transforms: [
+                    editable(editorActions)(edit.input())
+                ]
+            }
+        },
+        {
+            property: 'state',
+            header: {
+                label: 'State'
+            },
+            cell: {
+                transforms: [
+                    editable(editorActions)(edit.input())
+                ]
+            }
+        },
+        {
+            property: 'zip',
+            header: {
+                label: 'Zip Code'
+            },
+            cell: {
+                transforms: [
+                    editable(editorActions)(edit.input())
+                ]
+            }
+        },
+        {
+            property: 'phone1',
+            header: {
+                label: 'Phone'
+            },
+            cell: {
+                transforms: [
+                    editable(editorActions)(edit.input())
+                ]
+            }
+        },
+        {
+            property: 'phone2',
+            header: {
+                label: 'Phone 2'
+            },
+            cell: {
+                transforms: [
+                    editable(editorActions)(edit.input())
+                ]
             }
         },
         {
@@ -98,7 +135,7 @@ const columnModel = (editorActions, locations) => (
                     (value, {rowData}) => (
                         <span
                             className="remove"
-                            title="Delete Event"
+                            title="Delete Location"
                             onClick={() => editorActions.delete(rowData.id)}
                             style={{cursor: 'pointer'}}
                         >
@@ -111,6 +148,6 @@ const columnModel = (editorActions, locations) => (
     ]
 )
 
-export default EventEditor;
+export default LocationEditor;
 
 

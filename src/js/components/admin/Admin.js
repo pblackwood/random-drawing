@@ -1,14 +1,18 @@
 import React from "react";
 import Tabs from "../Tabs";
 import EventEditor from "./EventEditor";
+import LocationEditor from "./LocationEditor";
 
-const Admin = ({club, view, changeTab, eventEvents}) => {
+const Admin = ({club, view, changeTab, eventEvents, locationEvents}) => {
 
     const tabData = [
         {
             id: 0,
             name: 'Locations',
-            contents: <h1>Locations</h1>
+            contents: <LocationEditor
+                club={club}
+                editorEvents={locationEvents}
+            />
         },
         {
             id: 1,

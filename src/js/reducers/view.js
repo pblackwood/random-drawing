@@ -1,6 +1,6 @@
 export const DEFAULT_YEAR = 2016;
 export const DEFAULT_QUARTER = 4;
-export const DEFAULT_ADMIN_TAB = 0;
+export const DEFAULT_ADMIN_TAB = 1;
 
 // The "view" represents the user's current settings in the UI.
 const view = (state = {

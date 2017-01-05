@@ -47,6 +47,47 @@ const club = (state = {}, action) => {
                         .concat(state.events.slice(index + 1))
                 })
             }
+            break;
+
+        case 'CREATE_LOCATION':
+            newState = Object.assign({}, state, {locations: [action.location].concat(state.locations)});
+            break;
+
+        case 'DELETE_LOCATION':
+            index = findIndex(state.locations, {id: action.id});
+            if (index >= 0) {
+                newState = Object.assign({}, state, {
+                    locations: state.locations.slice(0, index).concat(state.locations.slice(index + 1))
+                })
+            }
+            break;
+
+        case 'EDIT_LOCATION':
+            index = findIndex(state.locations, {id: action.id});
+            if (index >= 0) {
+                newState = Object.assign({}, state, {
+                    locations: state.locations.slice(0, index)
+                        .concat(Object.assign({}, state.locations[index], {
+                            editing: action.columnIndex
+                        }))
+                        .concat(state.locations.slice(index + 1))
+                })
+            }
+            break;
+
+        case 'SAVE_LOCATION':
+            index = findIndex(state.locations, {id: action.id});
+            if (index >= 0) {
+                newState = Object.assign({}, state, {
+                    locations: state.locations.slice(0, index)
+                        .concat(Object.assign({}, state.locations[index], {
+                            [action.property]: action.value,
+                            editing: false
+                        }))
+                        .concat(state.locations.slice(index + 1))
+                })
+            }
+            break;
 
     }
     return newState;
