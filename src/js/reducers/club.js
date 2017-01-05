@@ -89,6 +89,46 @@ const club = (state = {}, action) => {
             }
             break;
 
+        case 'CREATE_PLAYER':
+            newState = Object.assign({}, state, {players: [action.player].concat(state.players)});
+            break;
+
+        case 'DELETE_PLAYER':
+            index = findIndex(state.players, {id: action.id});
+            if (index >= 0) {
+                newState = Object.assign({}, state, {
+                    players: state.players.slice(0, index).concat(state.players.slice(index + 1))
+                })
+            }
+            break;
+
+        case 'EDIT_PLAYER':
+            index = findIndex(state.players, {id: action.id});
+            if (index >= 0) {
+                newState = Object.assign({}, state, {
+                    players: state.players.slice(0, index)
+                        .concat(Object.assign({}, state.players[index], {
+                            editing: action.columnIndex
+                        }))
+                        .concat(state.players.slice(index + 1))
+                })
+            }
+            break;
+
+        case 'SAVE_PLAYER':
+            index = findIndex(state.players, {id: action.id});
+            if (index >= 0) {
+                newState = Object.assign({}, state, {
+                    players: state.players.slice(0, index)
+                        .concat(Object.assign({}, state.players[index], {
+                            [action.property]: action.value,
+                            editing: false
+                        }))
+                        .concat(state.players.slice(index + 1))
+                })
+            }
+            break;
+
     }
     return newState;
 }

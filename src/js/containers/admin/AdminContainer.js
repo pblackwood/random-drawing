@@ -40,6 +40,20 @@ const mapDispatchToProps = (dispatch) => ({
         onDelete: (id) => {
             dispatch(actions.deleteLocation(id))
         }
+    },
+    playerEvents: {
+        onCreate: () => {
+            dispatch(actions.createPlayer())
+        },
+        onEdit: (id, columnIndex) => {
+            dispatch(actions.editPlayer(id, columnIndex))
+        },
+        onSave: (id, property, value) => {
+            dispatch(actions.savePlayer(id, property, value))
+        },
+        onDelete: (id) => {
+            dispatch(actions.deletePlayer(id))
+        }
     }
 });
 

@@ -114,3 +114,33 @@ export const changeAdminTab = (id) => ({
     type: 'CHANGE_ADMIN_TAB',
     id
 });
+
+export const createPlayer = () => ({
+    type: 'CREATE_PLAYER',
+    player: {
+        id: uuid.v4(),
+        first: "New",
+        last: "Player",
+        email: "",
+        phone: ""
+    }
+});
+
+export const editPlayer = (id, columnIndex) => ({
+    type: 'EDIT_PLAYER',
+    id,
+    columnIndex
+});
+
+export const savePlayer = (id, property, value) => ({
+    type: 'SAVE_PLAYER',
+    id,
+    property,
+    value
+});
+
+export const deletePlayer = (id) => ({
+    type: 'DELETE_PLAYER',
+    id
+});
+

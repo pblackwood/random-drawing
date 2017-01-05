@@ -2,8 +2,9 @@ import React from "react";
 import Tabs from "../Tabs";
 import EventEditor from "./EventEditor";
 import LocationEditor from "./LocationEditor";
+import PlayerEditor from "./PlayerEditor";
 
-const Admin = ({club, view, changeTab, eventEvents, locationEvents}) => {
+const Admin = ({club, view, changeTab, eventEvents, locationEvents, playerEvents}) => {
 
     const tabData = [
         {
@@ -25,7 +26,10 @@ const Admin = ({club, view, changeTab, eventEvents, locationEvents}) => {
         {
             id: 2,
             name: 'Players',
-            contents: <h1>Players</h1>
+            contents: <PlayerEditor
+                club={club}
+                editorEvents={playerEvents}
+            />
         },
         {
             id: 3,

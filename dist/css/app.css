@@ -18,7 +18,7 @@
     text-align: center;
 }
 
-.admin .event-list, .admin .location-list {
+.admin .event-list, .admin .location-list, .admin .player-list {
     margin-top: 25px;
 }
 
@@ -57,7 +57,7 @@
     margin-bottom: 20px;
 }
 
-.event-button, .location-button {
+.event-button, .location-button, .player-button {
     margin-bottom: 5px;
 }
 

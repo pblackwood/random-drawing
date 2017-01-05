@@ -8,49 +8,67 @@
     "director": "Peter Blackwood",
     "players": [
       {
-        "id": 1,
+        "id": "dc183236-2970-4d45-b404-775242ab5055",
         "first": "Peter",
-        "last": "Swartwout"
+        "last": "Swartwout",
+        "email": "pswartwout@gmail.com",
+        "phone": "412-401-6615"
       },
       {
-        "id": 2,
+        "id": "6b12564c-9a93-4060-950f-394bf20ee75e",
         "first": "Jason",
-        "last": "Kirin"
+        "last": "Kirin",
+        "email": "",
+        "phone": ""
       },
       {
-        "id": 3,
+        "id": "5aa8c6d1-1f14-4f74-a848-f58b87eed865",
         "first": "Bill",
-        "last": "Versaw"
+        "last": "Versaw",
+        "email": "",
+        "phone": ""
       },
       {
-        "id": 4,
+        "id": "094f679c-1bb2-4231-b3ab-1c4900f636bd",
         "first": "Steve",
-        "last": "Hast"
+        "last": "Hast",
+        "email": "",
+        "phone": ""
       },
       {
-        "id": 5,
+        "id": "d3f3ff04-9831-4d61-ab4e-79f15758d3bb",
         "first": "Adam",
-        "last": "Versaw"
+        "last": "Versaw",
+        "email": "",
+        "phone": ""
       },
       {
-        "id": 6,
+        "id": "183e4cbc-0e42-4d09-8523-b7ef9917c5e4",
         "first": "John",
-        "last": "Brozda"
+        "last": "Brozda",
+        "email": "",
+        "phone": ""
       },
       {
-        "id": 7,
+        "id": "8190c053-d2dd-45d5-a2dd-903103dc7c4a",
         "first": "Adam",
-        "last": "Brozda"
+        "last": "Brozda",
+        "email": "",
+        "phone": ""
       },
       {
-        "id": 8,
+        "id": "ec70fb30-ddd4-4922-a320-b1b8d5f3cfa8",
         "first": "Scott",
-        "last": "Turner"
+        "last": "Turner",
+        "email": "",
+        "phone": ""
       },
       {
-        "id": 9,
+        "id": "ebca7efa-0ac1-4827-9162-a2ea08235c68",
         "first": "Joe",
-        "last": "Davis"
+        "last": "Davis",
+        "email": "",
+        "phone": ""
       }
     ],
     "locations": [
