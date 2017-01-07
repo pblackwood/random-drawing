@@ -55,7 +55,7 @@ export const createEvent = () => ({
         name: "New Event",
         location: "Select Location",
         date: moment().format('YYYY-MM-DD'),
-        attendees: 0
+        attendees: []
     }
 });
 
@@ -142,5 +142,22 @@ export const savePlayer = (id, property, value) => ({
 export const deletePlayer = (id) => ({
     type: 'DELETE_PLAYER',
     id
+});
+
+export const changeActiveEvent = (id) => ({
+    type: 'CHANGE_ACTIVE_EVENT',
+    id
+});
+
+export const addPlayerAttendance = (eventId, playerId) => ({
+    type: 'ADD_PLAYER_ATTENDANCE',
+    eventId,
+    playerId
+});
+
+export const removePlayerAttendance = (eventId, playerId) => ({
+    type: 'REMOVE_PLAYER_ATTENDANCE',
+    eventId,
+    playerId
 });
 

@@ -25,6 +25,9 @@ const mapDispatchToProps = (dispatch) => ({
         },
         onDelete: (id) => {
             dispatch(actions.deleteEvent(id))
+        },
+        onSelectEvent: (id) => {
+            dispatch(actions.changeActiveEvent(id))
         }
     },
     locationEvents: {
@@ -53,6 +56,19 @@ const mapDispatchToProps = (dispatch) => ({
         },
         onDelete: (id) => {
             dispatch(actions.deletePlayer(id))
+        }
+    },
+    attendanceEvents: {
+        onTogglePlayer: (target, eventId, playerId) => {
+            if (target.checked) {
+                dispatch(actions.addPlayerAttendance(eventId, playerId))
+            }
+            else {
+                dispatch(actions.removePlayerAttendance(eventId, playerId))
+            }
+        },
+        onSelectEvent: (id) => {
+            dispatch(actions.changeActiveEvent(id))
         }
     }
 });

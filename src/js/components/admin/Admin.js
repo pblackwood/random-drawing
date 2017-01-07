@@ -3,8 +3,9 @@ import Tabs from "../Tabs";
 import EventEditor from "./EventEditor";
 import LocationEditor from "./LocationEditor";
 import PlayerEditor from "./PlayerEditor";
+import AttendanceEditor from "./AttendanceEditor";
 
-const Admin = ({club, view, changeTab, eventEvents, locationEvents, playerEvents}) => {
+const Admin = ({club, view, changeTab, eventEvents, locationEvents, playerEvents, attendanceEvents}) => {
 
     const tabData = [
         {
@@ -34,7 +35,11 @@ const Admin = ({club, view, changeTab, eventEvents, locationEvents, playerEvents
         {
             id: 3,
             name: 'Attendance',
-            contents: <h1>Attendance</h1>
+            contents: <AttendanceEditor
+                club={club}
+                view={view}
+                editorEvents={attendanceEvents}
+            />
         }
     ]
 

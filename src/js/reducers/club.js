@@ -1,8 +1,8 @@
-import { findIndex } from "lodash";
+import { find, findIndex } from "lodash";
 
 const club = (state = {}, action) => {
     let newState = state;
-    let index;
+    let index, eventIndex, playerIndex;
     switch (action.type) {
         case 'RECEIVE_ATTENDANCE_STATS':
             // New JSON has arrived from the API
@@ -129,6 +129,35 @@ const club = (state = {}, action) => {
             }
             break;
 
+        case 'ADD_PLAYER_ATTENDANCE':
+            eventIndex = findIndex(state.events, {id: action.eventId});
+            if (eventIndex >= 0) {
+                newState = Object.assign({}, state, {
+                    events: state.events.slice(0, eventIndex)
+                        .concat(Object.assign({}, state.events[eventIndex], {
+                            attendees: state.events[eventIndex].attendees.concat([action.playerId])
+                        }))
+                        .concat(state.events.slice(eventIndex + 1))
+                })
+            }
+            break;
+
+        case 'REMOVE_PLAYER_ATTENDANCE':
+            eventIndex = findIndex(state.events, {id: action.eventId});
+            if (eventIndex >= 0) {
+                playerIndex = findIndex(state.events[eventIndex].attendees, (p) => (p === action.playerId));
+                if (playerIndex >= 0) {
+                    newState = Object.assign({}, state, {
+                        events: state.events.slice(0, eventIndex)
+                            .concat(Object.assign({}, state.events[eventIndex], {
+                                attendees: state.events[eventIndex].attendees.slice(0, playerIndex)
+                                    .concat(state.events[eventIndex].attendees.slice(playerIndex + 1))
+                            }))
+                            .concat(state.events.slice(eventIndex + 1))
+                    })
+                }
+            }
+            break;
     }
     return newState;
 }

@@ -9,7 +9,8 @@ const EventEditor = ({club, editorEvents}) => {
         create: editorEvents.onCreate,
         edit: editorEvents.onEdit,
         save: editorEvents.onSave,
-        delete: editorEvents.onDelete
+        delete: editorEvents.onDelete,
+        selectEvent: editorEvents.onSelectEvent
     }
 
     const locations = club.locations ? club.locations.map((loc) => ({value: loc.id, name: loc.name})) : []
@@ -84,7 +85,32 @@ const columnModel = (editorActions, locations) => (
                 label: 'How Many'
             },
             cell: {
-                property: 'attendees'
+                formatters: [
+                    (value, {rowData}) => (
+                        <span>{rowData.attendees.length}</span>
+                    )
+                ]
+            },
+        },
+        {
+            props: {
+                style: {
+                    width: 25
+                }
+            },
+            cell: {
+                formatters: [
+                    (value, {rowData}) => (
+                        <span
+                            className="attendee"
+                            title="Add Attendees"
+                            onClick={() => editorActions.selectEvent(rowData.id)}
+                            style={{cursor: 'pointer'}}
+                        >
+                            <i className="fa fa-user-plus"></i>
+                        </span>
+                    )
+                ]
             }
         },
         {
@@ -102,7 +128,7 @@ const columnModel = (editorActions, locations) => (
                             onClick={() => editorActions.delete(rowData.id)}
                             style={{cursor: 'pointer'}}
                         >
-                            &#10008;
+                            <i className="fa fa-trash"></i>
                         </span>
                     )
                 ]

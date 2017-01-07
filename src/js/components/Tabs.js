@@ -3,7 +3,7 @@ import Tab from "./Tab";
 
 const Tabs = ({tabs, activeTab, changeTab}) => {
     return (
-        <ul className="nav nav-pills">
+        <ul className="nav nav-pills admin-tabs">
             {
                 tabs.map((tab) => (
                     <Tab tab={tab}
