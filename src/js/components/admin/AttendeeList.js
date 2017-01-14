@@ -1,9 +1,18 @@
 import React from "react";
+import { orderBy } from "lodash";
 import * as Table from "reactabular-table";
+import * as sort from "sortabular";
 
-const AttendeeList = ({rows, columns, activeEvent}) => {
+const AttendeeList = ({rows, columns, sortingColumns, activeEvent}) => {
 
     if (rows && rows.length > 0 && activeEvent) {
+        let sortedRows = sort.sorter({
+            columns,
+            sortingColumns,
+            sort: orderBy,
+            strategy: sort.strategies.byProperty
+        })(rows);
+
         return (
             <div >
                 <h3>{ activeEvent ? activeEvent.name + ", " + activeEvent.date : "" }</h3>
@@ -11,7 +20,7 @@ const AttendeeList = ({rows, columns, activeEvent}) => {
                     className="pure-table pure-table-striped"
                     columns={columns}>
                     <Table.Header />
-                    <Table.Body rows={rows} rowKey="id"/>
+                    <Table.Body rows={sortedRows} rowKey="id"/>
                 </Table.Provider>
             </div>
         )

@@ -43,7 +43,7 @@ const mapDispatchToProps = (dispatch) => ({
             dispatch(actions.changeActiveEvent(id))
         },
         onColumnClick: (column) => {
-            dispatch(actions.changeSort('events', column))
+            dispatch(actions.changeSort('event', column))
         }
     },
     locationEvents: {
@@ -60,7 +60,7 @@ const mapDispatchToProps = (dispatch) => ({
             dispatch(actions.deleteLocation(id))
         },
         onColumnClick: (column) => {
-            dispatch(actions.changeSort('locations', column))
+            dispatch(actions.changeSort('location', column))
         }
     },
     playerEvents: {
@@ -75,6 +75,9 @@ const mapDispatchToProps = (dispatch) => ({
         },
         onDelete: (id) => {
             dispatch(actions.deletePlayer(id))
+        },
+        onColumnClick: (column) => {
+            dispatch(actions.changeSort('player', column))
         }
     },
     attendanceEvents: {
@@ -88,6 +91,9 @@ const mapDispatchToProps = (dispatch) => ({
         },
         onSelectEvent: (id) => {
             dispatch(actions.changeActiveEvent(id))
+        },
+        onColumnClick: (column) => {
+            dispatch(actions.changeSort('attendance', column))
         }
     }
 });
