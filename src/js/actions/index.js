@@ -180,8 +180,9 @@ export const updateMetadataVersion = () => ({
     version: uuid.v4()
 })
 
-export const changeEventSort = (column) => ({
-    type: 'CHANGE_EVENT_SORT',
+export const changeSort = (editor, column) => ({
+    type: 'CHANGE_SORT',
+    editor,
     column
 })
 

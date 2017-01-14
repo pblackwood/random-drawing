@@ -24,6 +24,7 @@ const Admin = ({club, view, stats, changeTab, fileEvents, eventEvents, locationE
             name: 'Locations',
             contents: <LocationEditor
                 club={club}
+                view={view}
                 editorEvents={locationEvents}
             />
         },

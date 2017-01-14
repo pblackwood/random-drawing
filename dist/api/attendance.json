@@ -1,749 +1,761 @@
 {
-    "club": {
-        "director": "Peter Blackwood",
-        "events": [
-            {
-                "attendees": [],
-                "date": "2016-02-15",
-                "editing": false,
-                "id": "1cab13f3-7c47-4034-9365-273db87cdaec",
-                "location": "Select Location",
-                "name": "Backgammon and Pizza"
-            },
-            {
-                "attendees": [],
-                "date": "2016-02-01",
-                "editing": false,
-                "id": "9ec2f60e-e6f6-4bab-b4bd-0f55e85e64ce",
-                "location": "Select Location",
-                "name": "Biddle's Escape from the Ordinary"
-            },
-            {
-                "attendees": [],
-                "date": "2016-07-13",
-                "editing": false,
-                "id": "ab5e86dc-6f54-49c2-a724-1d7edaa030f3",
-                "location": "Select Location",
-                "name": "Steve Hast's 16th Annual Summer Cooker"
-            },
-            {
-                "attendees": [],
-                "date": "2016-11-16",
-                "editing": false,
-                "id": "3b6fd6e8-bab1-4a1c-aa91-6c8757cbecbb",
-                "location": "bd8b5ceb-ab5b-4009-a15e-826513ffba74",
-                "name": "(Don't Lose Your) Market District"
-            },
-            {
-                "attendees": [],
-                "date": "2016-06-14",
-                "editing": false,
-                "id": "4772fa4e-58bd-4891-9e0e-12fffa7d953e",
-                "location": "bd8b5ceb-ab5b-4009-a15e-826513ffba74",
-                "name": "Caliente Means Hot Backgammon!"
-            },
-            {
-                "attendees": [
-                    "8190c053-d2dd-45d5-a2dd-903103dc7c4a",
-                    "183e4cbc-0e42-4d09-8523-b7ef9917c5e4",
-                    "a45ca3dc-ffd3-4585-80f5-fb44193a4536",
-                    "a61c4ae9-b439-43d9-8714-917fff1a9ca2",
-                    "dc183236-2970-4d45-b404-775242ab5055",
-                    "e1599979-b5a8-4f1e-a6e6-11d33585a83b",
-                    "094f679c-1bb2-4231-b3ab-1c4900f636bd",
-                    "2b12d975-8014-43e1-b496-82b6233edf06",
-                    "0cc8d7be-197e-4fd2-b744-11273759f035",
-                    "68dc2db2-6cc4-40f5-9a95-17c46c02e0af",
-                    "ef32dfe8-b04d-400b-b431-97d1571c48e9",
-                    "63f14914-0ec5-430d-b9a8-a756dd84207d"
-                ],
-                "date": "2016-01-04",
-                "editing": false,
-                "id": "015f7573-66e9-48b3-9d78-d2d1b2d3ccbc",
-                "location": "b91c9fa8-0f44-47c2-9c67-5aacc4733349",
-                "name": "Biddle's Escape from the Ordinary"
-            },
-            {
-                "attendees": [],
-                "date": "2016-01-19",
-                "editing": false,
-                "id": "5d13fb51-9b54-4dea-95cd-3398010759c6",
-                "location": "e2936f45-d378-4a0c-8d9b-1309259a296d",
-                "name": "Backgammon and Pizza"
-            }
+  "club": {
+    "director": "Peter Blackwood",
+    "events": [
+      {
+        "attendees": [],
+        "date": "2016-02-15",
+        "editing": false,
+        "id": "1cab13f3-7c47-4034-9365-273db87cdaec",
+        "location": "Select Location",
+        "name": "Backgammon and Pizza"
+      },
+      {
+        "attendees": [],
+        "date": "2016-02-01",
+        "editing": false,
+        "id": "9ec2f60e-e6f6-4bab-b4bd-0f55e85e64ce",
+        "location": "Select Location",
+        "name": "Biddle's Escape from the Ordinary"
+      },
+      {
+        "attendees": [],
+        "date": "2016-07-13",
+        "editing": false,
+        "id": "ab5e86dc-6f54-49c2-a724-1d7edaa030f3",
+        "location": "Select Location",
+        "name": "Steve Hast's 16th Annual Summer Cooker"
+      },
+      {
+        "attendees": [],
+        "date": "2016-11-16",
+        "editing": false,
+        "id": "3b6fd6e8-bab1-4a1c-aa91-6c8757cbecbb",
+        "location": "bd8b5ceb-ab5b-4009-a15e-826513ffba74",
+        "name": "(Don't Lose Your) Market District"
+      },
+      {
+        "attendees": [],
+        "date": "2016-06-14",
+        "editing": false,
+        "id": "4772fa4e-58bd-4891-9e0e-12fffa7d953e",
+        "location": "bd8b5ceb-ab5b-4009-a15e-826513ffba74",
+        "name": "Caliente Means Hot Backgammon!"
+      },
+      {
+        "attendees": [
+          "8190c053-d2dd-45d5-a2dd-903103dc7c4a",
+          "183e4cbc-0e42-4d09-8523-b7ef9917c5e4",
+          "a45ca3dc-ffd3-4585-80f5-fb44193a4536",
+          "a61c4ae9-b439-43d9-8714-917fff1a9ca2",
+          "dc183236-2970-4d45-b404-775242ab5055",
+          "e1599979-b5a8-4f1e-a6e6-11d33585a83b",
+          "094f679c-1bb2-4231-b3ab-1c4900f636bd",
+          "2b12d975-8014-43e1-b496-82b6233edf06",
+          "0cc8d7be-197e-4fd2-b744-11273759f035",
+          "68dc2db2-6cc4-40f5-9a95-17c46c02e0af",
+          "ef32dfe8-b04d-400b-b431-97d1571c48e9",
+          "63f14914-0ec5-430d-b9a8-a756dd84207d"
         ],
-        "location": "Pittsburgh",
-        "locations": [
-            {
-                "city": "Pittsburgh",
-                "editing": false,
-                "id": "14fa08b7-5403-4b3e-b95a-29b80adb156b",
-                "name": "Giant Eagle Market District",
-                "phone1": "412-788-5392",
-                "phone2": "",
-                "state": "PA",
-                "street1": "Settler's Ridge",
-                "street2": "",
-                "zip": "15000"
-            },
-            {
-                "city": "Pittsburgh",
-                "editing": false,
-                "id": "bd8b5ceb-ab5b-4009-a15e-826513ffba74",
-                "name": "Caliente Pizza & Draft House",
-                "phone1": "412-344-5566",
-                "phone2": "",
-                "state": "PA",
-                "street1": "329 Castle Shannon Blvd",
-                "street2": "",
-                "zip": "15234"
-            },
-            {
-                "city": "Pittsburgh",
-                "editing": false,
-                "id": "172e376f-9e98-4044-bf91-757871e7a116",
-                "name": "Sharp Edge Beer Emporium",
-                "phone1": "412-661-3537",
-                "phone2": "",
-                "state": "PA",
-                "street1": "302 S St Clair St ",
-                "street2": "",
-                "zip": "15206"
-            },
-            {
-                "city": "Pittsburgh",
-                "editing": false,
-                "id": "e2936f45-d378-4a0c-8d9b-1309259a296d",
-                "name": "Pub & Pizza",
-                "phone1": "412-344-5566",
-                "phone2": "",
-                "state": "PA",
-                "street1": "329 Castle Shannon Blvd",
-                "street2": "",
-                "zip": "15234"
-            },
-            {
-                "city": "Pittsburgh",
-                "editing": false,
-                "id": "b91c9fa8-0f44-47c2-9c67-5aacc4733349",
-                "name": "Biddle's Escape",
-                "phone1": "412-999-9009",
-                "phone2": "",
-                "state": "PA",
-                "street1": "401 Biddle Ave",
-                "street2": "",
-                "zip": "15222"
-            },
-            {
-                "city": "Pittsburgh",
-                "editing": false,
-                "id": "d4a17aeb-8ac7-4e8c-a6cd-1fbaf55ab412",
-                "name": "Duke's Rib House & Grille",
-                "phone1": "412-207-1235",
-                "phone2": "",
-                "state": "PA",
-                "street1": "1910 Cochran Rd",
-                "street2": "Manor Oak II",
-                "zip": "15220"
-            }
+        "date": "2016-01-04",
+        "editing": false,
+        "id": "015f7573-66e9-48b3-9d78-d2d1b2d3ccbc",
+        "location": "b91c9fa8-0f44-47c2-9c67-5aacc4733349",
+        "name": "Biddle's Escape from the Ordinary"
+      },
+      {
+        "attendees": [],
+        "date": "2016-01-19",
+        "editing": false,
+        "id": "5d13fb51-9b54-4dea-95cd-3398010759c6",
+        "location": "e2936f45-d378-4a0c-8d9b-1309259a296d",
+        "name": "Backgammon and Pizza"
+      }
+    ],
+    "location": "Pittsburgh",
+    "locations": [
+      {
+        "id": "0f85432f-3595-4cfe-83a2-63ff0940d4a3",
+        "name": "Steve Hast's House",
+        "street1": "",
+        "street2": "",
+        "city": "Allison Park",
+        "state": "PA",
+        "zip": "15000",
+        "phone1": "412-123-4567",
+        "phone2": "",
+        "editing": false
+      },
+      {
+        "city": "Pittsburgh",
+        "editing": false,
+        "id": "14fa08b7-5403-4b3e-b95a-29b80adb156b",
+        "name": "Giant Eagle Market District",
+        "phone1": "412-788-5392",
+        "phone2": "",
+        "state": "PA",
+        "street1": "Settler's Ridge",
+        "street2": "",
+        "zip": "15000"
+      },
+      {
+        "city": "Pittsburgh",
+        "editing": false,
+        "id": "bd8b5ceb-ab5b-4009-a15e-826513ffba74",
+        "name": "Caliente Pizza & Draft House",
+        "phone1": "412-344-5566",
+        "phone2": "",
+        "state": "PA",
+        "street1": "329 Castle Shannon Blvd",
+        "street2": "",
+        "zip": "15234"
+      },
+      {
+        "city": "Pittsburgh",
+        "editing": false,
+        "id": "172e376f-9e98-4044-bf91-757871e7a116",
+        "name": "Sharp Edge Beer Emporium",
+        "phone1": "412-661-3537",
+        "phone2": "",
+        "state": "PA",
+        "street1": "302 S St Clair St ",
+        "street2": "",
+        "zip": "15206"
+      },
+      {
+        "city": "Pittsburgh",
+        "editing": false,
+        "id": "e2936f45-d378-4a0c-8d9b-1309259a296d",
+        "name": "Pub & Pizza",
+        "phone1": "412-344-5566",
+        "phone2": "",
+        "state": "PA",
+        "street1": "329 Castle Shannon Blvd",
+        "street2": "",
+        "zip": "15234"
+      },
+      {
+        "city": "Pittsburgh",
+        "editing": false,
+        "id": "b91c9fa8-0f44-47c2-9c67-5aacc4733349",
+        "name": "Biddle's Escape",
+        "phone1": "412-999-9009",
+        "phone2": "",
+        "state": "PA",
+        "street1": "401 Biddle Ave",
+        "street2": "",
+        "zip": "15222"
+      },
+      {
+        "city": "Pittsburgh",
+        "editing": false,
+        "id": "d4a17aeb-8ac7-4e8c-a6cd-1fbaf55ab412",
+        "name": "Duke's Rib House & Grille",
+        "phone1": "412-207-1235",
+        "phone2": "",
+        "state": "PA",
+        "street1": "1910 Cochran Rd",
+        "street2": "Manor Oak II",
+        "zip": "15220"
+      }
+    ],
+    "name": "Steel City Backgammon",
+    "players": [
+      {
+        "editing": false,
+        "email": "",
+        "first": "Alex",
+        "id": "2b12d975-8014-43e1-b496-82b6233edf06",
+        "last": "Rodia",
+        "phone": ""
+      },
+      {
+        "editing": false,
+        "email": "",
+        "first": "Suzie",
+        "id": "0cc8d7be-197e-4fd2-b744-11273759f035",
+        "last": "Thompson",
+        "phone": ""
+      },
+      {
+        "editing": false,
+        "email": "",
+        "first": "Scott",
+        "id": "68dc2db2-6cc4-40f5-9a95-17c46c02e0af",
+        "last": "Turner",
+        "phone": ""
+      },
+      {
+        "editing": false,
+        "email": "",
+        "first": "Bulent",
+        "id": "ef32dfe8-b04d-400b-b431-97d1571c48e9",
+        "last": "",
+        "phone": ""
+      },
+      {
+        "editing": false,
+        "email": "",
+        "first": "Max",
+        "id": "63f14914-0ec5-430d-b9a8-a756dd84207d",
+        "last": "Swartwout",
+        "phone": ""
+      },
+      {
+        "editing": false,
+        "email": "",
+        "first": "Bill",
+        "id": "a45ca3dc-ffd3-4585-80f5-fb44193a4536",
+        "last": "Hathaway",
+        "phone": ""
+      },
+      {
+        "editing": false,
+        "email": "",
+        "first": "Bryan",
+        "id": "a61c4ae9-b439-43d9-8714-917fff1a9ca2",
+        "last": "DeMatt",
+        "phone": ""
+      },
+      {
+        "editing": false,
+        "email": "",
+        "first": "Neal",
+        "id": "e1599979-b5a8-4f1e-a6e6-11d33585a83b",
+        "last": "Brunette",
+        "phone": ""
+      },
+      {
+        "email": "pswartwout@gmail.com",
+        "first": "Peter",
+        "id": "dc183236-2970-4d45-b404-775242ab5055",
+        "last": "Blackwood",
+        "phone": "412-401-6615"
+      },
+      {
+        "email": "",
+        "first": "Jason",
+        "id": "6b12564c-9a93-4060-950f-394bf20ee75e",
+        "last": "Kirin",
+        "phone": ""
+      },
+      {
+        "email": "",
+        "first": "Bill",
+        "id": "5aa8c6d1-1f14-4f74-a848-f58b87eed865",
+        "last": "Versaw",
+        "phone": ""
+      },
+      {
+        "email": "",
+        "first": "Steve",
+        "id": "094f679c-1bb2-4231-b3ab-1c4900f636bd",
+        "last": "Hast",
+        "phone": ""
+      },
+      {
+        "email": "",
+        "first": "Adam",
+        "id": "d3f3ff04-9831-4d61-ab4e-79f15758d3bb",
+        "last": "Versaw",
+        "phone": ""
+      },
+      {
+        "email": "",
+        "first": "John",
+        "id": "183e4cbc-0e42-4d09-8523-b7ef9917c5e4",
+        "last": "Brozda",
+        "phone": ""
+      },
+      {
+        "email": "",
+        "first": "Adam",
+        "id": "8190c053-d2dd-45d5-a2dd-903103dc7c4a",
+        "last": "Brozda",
+        "phone": ""
+      },
+      {
+        "email": "",
+        "first": "Scott",
+        "id": "ec70fb30-ddd4-4922-a320-b1b8d5f3cfa8",
+        "last": "Turner",
+        "phone": ""
+      },
+      {
+        "email": "",
+        "first": "Joe",
+        "id": "ebca7efa-0ac1-4827-9162-a2ea08235c68",
+        "last": "Davis",
+        "phone": ""
+      }
+    ],
+    "version": "3903e3a7-605c-42f8-9209-e5294f029796"
+  },
+  "stats": {
+    "attendance": [
+      {
+        "pickWinners": false,
+        "playerList": [
+          {
+            "events": 2,
+            "name": "Janeen Bost"
+          },
+          {
+            "events": 4,
+            "name": "John Brozda"
+          },
+          {
+            "events": 3,
+            "name": "Adam Brozda"
+          },
+          {
+            "events": 5,
+            "name": "Neal Brunette"
+          },
+          {
+            "events": 3,
+            "name": "Coralie Campobasso"
+          },
+          {
+            "events": 4,
+            "name": "Rich Catalano"
+          },
+          {
+            "events": 2,
+            "name": "Andy Cornelius"
+          },
+          {
+            "events": 2,
+            "name": "Jean Cronyn"
+          },
+          {
+            "events": 1,
+            "name": "Dean DeGregorio"
+          },
+          {
+            "events": 2,
+            "name": "Aleesha DeMatt"
+          },
+          {
+            "events": 4,
+            "name": "Bryan DeMatt"
+          },
+          {
+            "events": 1,
+            "name": "Andy Field"
+          },
+          {
+            "events": 3,
+            "name": "Stevie Grund"
+          },
+          {
+            "events": 2,
+            "name": "Ryan Hast"
+          },
+          {
+            "events": 5,
+            "name": "Steve Hast"
+          },
+          {
+            "events": 2,
+            "name": "Sharlene Hupka"
+          },
+          {
+            "events": 2,
+            "name": "Marilyn Kubiak"
+          },
+          {
+            "events": 2,
+            "name": "Ed Luksik"
+          },
+          {
+            "events": 1,
+            "name": "Chris Quillen"
+          },
+          {
+            "events": 3,
+            "name": "Alex Rodia"
+          },
+          {
+            "events": 2,
+            "name": "Charlie Stewart"
+          },
+          {
+            "events": 4,
+            "name": "Kristy Stroh"
+          },
+          {
+            "events": 1,
+            "name": "Suzie Thompson"
+          },
+          {
+            "events": 1,
+            "name": "Frank Tillman"
+          },
+          {
+            "events": 4,
+            "name": "Scott Turner"
+          },
+          {
+            "events": 3,
+            "name": "Bill Versaw"
+          },
+          {
+            "events": 4,
+            "name": "Jeff Woods"
+          },
+          {
+            "events": 3,
+            "name": "Joe Z"
+          },
+          {
+            "events": 1,
+            "name": "Ann"
+          },
+          {
+            "events": 1,
+            "name": "Bahareh"
+          },
+          {
+            "events": 1,
+            "name": "Bulent"
+          },
+          {
+            "events": 1,
+            "name": "Jeff"
+          },
+          {
+            "events": 1,
+            "name": "Marianne"
+          }
         ],
-        "name": "Steel City Backgammon",
-        "players": [
-            {
-                "editing": false,
-                "email": "",
-                "first": "Alex",
-                "id": "2b12d975-8014-43e1-b496-82b6233edf06",
-                "last": "Rodia",
-                "phone": ""
-            },
-            {
-                "editing": false,
-                "email": "",
-                "first": "Suzie",
-                "id": "0cc8d7be-197e-4fd2-b744-11273759f035",
-                "last": "Thompson",
-                "phone": ""
-            },
-            {
-                "editing": false,
-                "email": "",
-                "first": "Scott",
-                "id": "68dc2db2-6cc4-40f5-9a95-17c46c02e0af",
-                "last": "Turner",
-                "phone": ""
-            },
-            {
-                "editing": false,
-                "email": "",
-                "first": "Bulent",
-                "id": "ef32dfe8-b04d-400b-b431-97d1571c48e9",
-                "last": "",
-                "phone": ""
-            },
-            {
-                "editing": false,
-                "email": "",
-                "first": "Max",
-                "id": "63f14914-0ec5-430d-b9a8-a756dd84207d",
-                "last": "Swartwout",
-                "phone": ""
-            },
-            {
-                "editing": false,
-                "email": "",
-                "first": "Bill",
-                "id": "a45ca3dc-ffd3-4585-80f5-fb44193a4536",
-                "last": "Hathaway",
-                "phone": ""
-            },
-            {
-                "editing": false,
-                "email": "",
-                "first": "Bryan",
-                "id": "a61c4ae9-b439-43d9-8714-917fff1a9ca2",
-                "last": "DeMatt",
-                "phone": ""
-            },
-            {
-                "editing": false,
-                "email": "",
-                "first": "Neal",
-                "id": "e1599979-b5a8-4f1e-a6e6-11d33585a83b",
-                "last": "Brunette",
-                "phone": ""
-            },
-            {
-                "email": "pswartwout@gmail.com",
-                "first": "Peter",
-                "id": "dc183236-2970-4d45-b404-775242ab5055",
-                "last": "Blackwood",
-                "phone": "412-401-6615"
-            },
-            {
-                "email": "",
-                "first": "Jason",
-                "id": "6b12564c-9a93-4060-950f-394bf20ee75e",
-                "last": "Kirin",
-                "phone": ""
-            },
-            {
-                "email": "",
-                "first": "Bill",
-                "id": "5aa8c6d1-1f14-4f74-a848-f58b87eed865",
-                "last": "Versaw",
-                "phone": ""
-            },
-            {
-                "email": "",
-                "first": "Steve",
-                "id": "094f679c-1bb2-4231-b3ab-1c4900f636bd",
-                "last": "Hast",
-                "phone": ""
-            },
-            {
-                "email": "",
-                "first": "Adam",
-                "id": "d3f3ff04-9831-4d61-ab4e-79f15758d3bb",
-                "last": "Versaw",
-                "phone": ""
-            },
-            {
-                "email": "",
-                "first": "John",
-                "id": "183e4cbc-0e42-4d09-8523-b7ef9917c5e4",
-                "last": "Brozda",
-                "phone": ""
-            },
-            {
-                "email": "",
-                "first": "Adam",
-                "id": "8190c053-d2dd-45d5-a2dd-903103dc7c4a",
-                "last": "Brozda",
-                "phone": ""
-            },
-            {
-                "email": "",
-                "first": "Scott",
-                "id": "ec70fb30-ddd4-4922-a320-b1b8d5f3cfa8",
-                "last": "Turner",
-                "phone": ""
-            },
-            {
-                "email": "",
-                "first": "Joe",
-                "id": "ebca7efa-0ac1-4827-9162-a2ea08235c68",
-                "last": "Davis",
-                "phone": ""
-            }
+        "quarter": 1,
+        "winners": [
+          "Joe Z",
+          "Kristy Stroh"
         ],
-        "version": "5557999e-b5e2-4ee6-9b12-f1616e5bd30b"
-    },
-    "stats": {
-        "attendance": [
-            {
-                "pickWinners": false,
-                "playerList": [
-                    {
-                        "events": 2,
-                        "name": "Janeen Bost"
-                    },
-                    {
-                        "events": 4,
-                        "name": "John Brozda"
-                    },
-                    {
-                        "events": 3,
-                        "name": "Adam Brozda"
-                    },
-                    {
-                        "events": 5,
-                        "name": "Neal Brunette"
-                    },
-                    {
-                        "events": 3,
-                        "name": "Coralie Campobasso"
-                    },
-                    {
-                        "events": 4,
-                        "name": "Rich Catalano"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Andy Cornelius"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Jean Cronyn"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Dean DeGregorio"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Aleesha DeMatt"
-                    },
-                    {
-                        "events": 4,
-                        "name": "Bryan DeMatt"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Andy Field"
-                    },
-                    {
-                        "events": 3,
-                        "name": "Stevie Grund"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Ryan Hast"
-                    },
-                    {
-                        "events": 5,
-                        "name": "Steve Hast"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Sharlene Hupka"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Marilyn Kubiak"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Ed Luksik"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Chris Quillen"
-                    },
-                    {
-                        "events": 3,
-                        "name": "Alex Rodia"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Charlie Stewart"
-                    },
-                    {
-                        "events": 4,
-                        "name": "Kristy Stroh"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Suzie Thompson"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Frank Tillman"
-                    },
-                    {
-                        "events": 4,
-                        "name": "Scott Turner"
-                    },
-                    {
-                        "events": 3,
-                        "name": "Bill Versaw"
-                    },
-                    {
-                        "events": 4,
-                        "name": "Jeff Woods"
-                    },
-                    {
-                        "events": 3,
-                        "name": "Joe Z"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Ann"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Bahareh"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Bulent"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Jeff"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Marianne"
-                    }
-                ],
-                "quarter": 1,
-                "winners": [
-                    "Joe Z",
-                    "Kristy Stroh"
-                ],
-                "year": 2016
-            },
-            {
-                "pickWinners": false,
-                "playerList": [
-                    {
-                        "events": 3,
-                        "name": "Jean Cronyn"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Frank Tillman"
-                    },
-                    {
-                        "events": 3,
-                        "name": "Bill Versaw"
-                    },
-                    {
-                        "events": 3,
-                        "name": "Joe Z"
-                    },
-                    {
-                        "events": 4,
-                        "name": "Steve Hast"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Ali"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Ron Lawson"
-                    },
-                    {
-                        "events": 3,
-                        "name": "Kristy Stroh"
-                    },
-                    {
-                        "events": 4,
-                        "name": "Neal Brunette"
-                    },
-                    {
-                        "events": 4,
-                        "name": "Rich Catalano"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Charlie Stewart"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Aleesha DeMatt"
-                    },
-                    {
-                        "events": 3,
-                        "name": "Bryan DeMatt"
-                    },
-                    {
-                        "events": 3,
-                        "name": "John Brozda"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Adam Brozda"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Scott Turner"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Alex Rodia"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Coralie Campobasso"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Bud Bowers"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Phil Ritt"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Alex Brillman"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Jack Brillman"
-                    },
-                    {
-                        "events": 1,
-                        "name": "John Graziani"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Max Swartwout"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Jeff Woods"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Bulent"
-                    }
-                ],
-                "quarter": 2,
-                "winners": [
-                    "Kristy Stroh",
-                    "Neal Brunette"
-                ],
-                "year": 2016
-            },
-            {
-                "pickWinners": false,
-                "playerList": [
-                    {
-                        "events": 2,
-                        "name": "John Brozda"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Neal Brunette"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Carmen Brunette"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Bud Bowers"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Coralie Campobasso"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Rich Catalano"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Andy Cornelius"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Dean DiGregorio"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Joe Davis"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Bryan DeMatt"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Aleesha DeMatt"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Becky Ferrer"
-                    },
-                    {
-                        "events": 3,
-                        "name": "Steve Hast"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Sid Kornberg"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Ioulia Kornberg"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Ken Lazarr"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Rose McNeilly"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Tom Moody"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Tony P"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Kristy Stroh"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Max Swartwout"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Scott Turner"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Adam Versaw"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Bill Versaw"
-                    },
-                    {
-                        "events": 4,
-                        "name": "Joe Zipper"
-                    }
-                ],
-                "quarter": 3,
-                "winners": [],
-                "year": 2016
-            },
-            {
-                "pickWinners": false,
-                "playerList": [
-                    {
-                        "events": 1,
-                        "name": "John Brozda"
-                    },
-                    {
-                        "events": 3,
-                        "name": "Neal Brunette"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Carmen Brunette"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Melanie B"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Rich Catalano"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Andy Cornelius"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Dean DiGregorio"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Bryan DeMatt"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Aleesha DeMatt"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Becky Ferrer"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Steve Hast"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Kate Luckett"
-                    },
-                    {
-                        "events": 2,
-                        "name": "Sean Montgomery"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Tom Moody"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Patti Morris"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Dave Ostroke"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Nick Papageorgiou"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Kristy Stroh"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Scott Turner"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Adam Versaw"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Bill Versaw"
-                    },
-                    {
-                        "events": 1,
-                        "name": "Joe Zipper"
-                    }
-                ],
-                "quarter": 4,
-                "winners": [],
-                "year": 2016
-            }
+        "year": 2016
+      },
+      {
+        "pickWinners": false,
+        "playerList": [
+          {
+            "events": 3,
+            "name": "Jean Cronyn"
+          },
+          {
+            "events": 2,
+            "name": "Frank Tillman"
+          },
+          {
+            "events": 3,
+            "name": "Bill Versaw"
+          },
+          {
+            "events": 3,
+            "name": "Joe Z"
+          },
+          {
+            "events": 4,
+            "name": "Steve Hast"
+          },
+          {
+            "events": 2,
+            "name": "Ali"
+          },
+          {
+            "events": 1,
+            "name": "Ron Lawson"
+          },
+          {
+            "events": 3,
+            "name": "Kristy Stroh"
+          },
+          {
+            "events": 4,
+            "name": "Neal Brunette"
+          },
+          {
+            "events": 4,
+            "name": "Rich Catalano"
+          },
+          {
+            "events": 2,
+            "name": "Charlie Stewart"
+          },
+          {
+            "events": 1,
+            "name": "Aleesha DeMatt"
+          },
+          {
+            "events": 3,
+            "name": "Bryan DeMatt"
+          },
+          {
+            "events": 3,
+            "name": "John Brozda"
+          },
+          {
+            "events": 2,
+            "name": "Adam Brozda"
+          },
+          {
+            "events": 2,
+            "name": "Scott Turner"
+          },
+          {
+            "events": 2,
+            "name": "Alex Rodia"
+          },
+          {
+            "events": 1,
+            "name": "Coralie Campobasso"
+          },
+          {
+            "events": 1,
+            "name": "Bud Bowers"
+          },
+          {
+            "events": 2,
+            "name": "Phil Ritt"
+          },
+          {
+            "events": 1,
+            "name": "Alex Brillman"
+          },
+          {
+            "events": 1,
+            "name": "Jack Brillman"
+          },
+          {
+            "events": 1,
+            "name": "John Graziani"
+          },
+          {
+            "events": 1,
+            "name": "Max Swartwout"
+          },
+          {
+            "events": 1,
+            "name": "Jeff Woods"
+          },
+          {
+            "events": 1,
+            "name": "Bulent"
+          }
         ],
-        "version": "5557999e-b5e2-4ee6-9b12-f1616e5bd30b"
-    }
+        "quarter": 2,
+        "winners": [
+          "Kristy Stroh",
+          "Neal Brunette"
+        ],
+        "year": 2016
+      },
+      {
+        "pickWinners": false,
+        "playerList": [
+          {
+            "events": 2,
+            "name": "John Brozda"
+          },
+          {
+            "events": 2,
+            "name": "Neal Brunette"
+          },
+          {
+            "events": 2,
+            "name": "Carmen Brunette"
+          },
+          {
+            "events": 2,
+            "name": "Bud Bowers"
+          },
+          {
+            "events": 2,
+            "name": "Coralie Campobasso"
+          },
+          {
+            "events": 2,
+            "name": "Rich Catalano"
+          },
+          {
+            "events": 1,
+            "name": "Andy Cornelius"
+          },
+          {
+            "events": 2,
+            "name": "Dean DiGregorio"
+          },
+          {
+            "events": 1,
+            "name": "Joe Davis"
+          },
+          {
+            "events": 2,
+            "name": "Bryan DeMatt"
+          },
+          {
+            "events": 2,
+            "name": "Aleesha DeMatt"
+          },
+          {
+            "events": 1,
+            "name": "Becky Ferrer"
+          },
+          {
+            "events": 3,
+            "name": "Steve Hast"
+          },
+          {
+            "events": 2,
+            "name": "Sid Kornberg"
+          },
+          {
+            "events": 2,
+            "name": "Ioulia Kornberg"
+          },
+          {
+            "events": 1,
+            "name": "Ken Lazarr"
+          },
+          {
+            "events": 1,
+            "name": "Rose McNeilly"
+          },
+          {
+            "events": 1,
+            "name": "Tom Moody"
+          },
+          {
+            "events": 1,
+            "name": "Tony P"
+          },
+          {
+            "events": 1,
+            "name": "Kristy Stroh"
+          },
+          {
+            "events": 2,
+            "name": "Max Swartwout"
+          },
+          {
+            "events": 1,
+            "name": "Scott Turner"
+          },
+          {
+            "events": 1,
+            "name": "Adam Versaw"
+          },
+          {
+            "events": 2,
+            "name": "Bill Versaw"
+          },
+          {
+            "events": 4,
+            "name": "Joe Zipper"
+          }
+        ],
+        "quarter": 3,
+        "winners": [],
+        "year": 2016
+      },
+      {
+        "pickWinners": false,
+        "playerList": [
+          {
+            "events": 1,
+            "name": "John Brozda"
+          },
+          {
+            "events": 3,
+            "name": "Neal Brunette"
+          },
+          {
+            "events": 2,
+            "name": "Carmen Brunette"
+          },
+          {
+            "events": 1,
+            "name": "Melanie B"
+          },
+          {
+            "events": 1,
+            "name": "Rich Catalano"
+          },
+          {
+            "events": 1,
+            "name": "Andy Cornelius"
+          },
+          {
+            "events": 1,
+            "name": "Dean DiGregorio"
+          },
+          {
+            "events": 1,
+            "name": "Bryan DeMatt"
+          },
+          {
+            "events": 1,
+            "name": "Aleesha DeMatt"
+          },
+          {
+            "events": 1,
+            "name": "Becky Ferrer"
+          },
+          {
+            "events": 1,
+            "name": "Steve Hast"
+          },
+          {
+            "events": 1,
+            "name": "Kate Luckett"
+          },
+          {
+            "events": 2,
+            "name": "Sean Montgomery"
+          },
+          {
+            "events": 1,
+            "name": "Tom Moody"
+          },
+          {
+            "events": 1,
+            "name": "Patti Morris"
+          },
+          {
+            "events": 1,
+            "name": "Dave Ostroke"
+          },
+          {
+            "events": 1,
+            "name": "Nick Papageorgiou"
+          },
+          {
+            "events": 1,
+            "name": "Kristy Stroh"
+          },
+          {
+            "events": 1,
+            "name": "Scott Turner"
+          },
+          {
+            "events": 1,
+            "name": "Adam Versaw"
+          },
+          {
+            "events": 1,
+            "name": "Bill Versaw"
+          },
+          {
+            "events": 1,
+            "name": "Joe Zipper"
+          }
+        ],
+        "quarter": 4,
+        "winners": [],
+        "year": 2016
+      }
+    ],
+    "version": "3903e3a7-605c-42f8-9209-e5294f029796"
+  }
 }

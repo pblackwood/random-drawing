@@ -18,6 +18,12 @@ const view = (state = {
             position: 0
         }
     },
+    locationSortingColumns: {
+        'name': {
+            direction: 'asc',
+            position: 0
+        }
+    },
     jsonFilePath: DEFAULT_JSON_FILE_PATH,
     jsonFileName: DEFAULT_JSON_FILE_NAME
 }, action) => {
@@ -54,34 +60,44 @@ const view = (state = {
                 jsonFileName: action.name
             });
             break;
-        case 'CHANGE_EVENT_SORT':
-            let col = state.eventSortingColumns[action.column];
-            if (col) {
-                let newCols = omit(state.eventSortingColumns, action.column);
-                if (col.direction === 'asc') {
-                    newCols[action.column] = {
-                        direction: 'desc',
-                        position: col.position
-                    }
-                }
-                newState = Object.assign({}, state, {
-                    eventSortingColumns: newCols
-                });
-            }
-            else {
-                col = {
-                    direction: 'asc',
-                    position: getNextSortPosition(state.eventSortingColumns)
-                }
-                newState = Object.assign({}, state, {
-                    eventSortingColumns: Object.assign({}, state.eventSortingColumns, {
-                        [action.column]: col
-                    })
-                });
-            }
+        case 'CHANGE_SORT':
+            newState = sortReducers[action.editor](state, action.column);
             break;
     }
     return newState;
+}
+
+const sortReducers = {
+    'events': (state, column) => (changeSort('eventSortingColumns', state, column)),
+    'locations': (state, column) => (changeSort('locationSortingColumns', state, column))
+}
+
+const changeSort = (sortingColumnName, state, column) => {
+    let sortingColumns = state[sortingColumnName];
+    let col = sortingColumns[column];
+    if (col) {
+        let newCols = omit(sortingColumns, column);
+        if (col.direction === 'asc') {
+            newCols[column] = {
+                direction: 'desc',
+                position: col.position
+            }
+        }
+        return Object.assign({}, state, {
+            [sortingColumnName]: newCols
+        });
+    }
+    else {
+        col = {
+            direction: 'asc',
+            position: getNextSortPosition(sortingColumns)
+        }
+        return Object.assign({}, state, {
+            [sortingColumnName]: Object.assign({}, sortingColumns, {
+                [column]: col
+            })
+        });
+    }
 }
 
 const getNextSortPosition = (sortingColumns) => {

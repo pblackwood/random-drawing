@@ -1,152 +1,173 @@
 import React, { PropTypes } from "react";
-import LocationList from "./LocationList";
 import * as edit from "react-edit";
+import * as sort from "sortabular";
+import LocationList from "./LocationList";
 
-const LocationEditor = ({club, editorEvents}) => {
+const LocationEditor = ({club, view, editorEvents}) => {
 
     const editorActions = {
         create: editorEvents.onCreate,
         edit: editorEvents.onEdit,
         save: editorEvents.onSave,
-        delete: editorEvents.onDelete
+        delete: editorEvents.onDelete,
+        sort: editorEvents.onColumnClick
     }
 
     return (
         <div className="location-list">
             <LocationList
                 rows={club.locations}
-                columns={columnModel(editorActions)}
+                columns={columnModel(editorActions, view)}
+                sortingColumns={view.locationSortingColumns}
                 createLocation={editorActions.create}
             />
         </div>
     )
 };
 
-const editable = (editorActions) => {
-    return edit.edit({
-        isEditing: ({columnIndex, rowData}) => columnIndex === rowData.editing,
-        onActivate: ({columnIndex, rowData}) => {
-            editorActions.edit(rowData.id, columnIndex);
-        },
-        onValue: ({value, rowData, property}) => {
-            editorActions.save(rowData.id, property, value);
-        }
-    })
-}
+const columnModel = (editorActions, view) => {
 
-const columnModel = (editorActions) => (
-    [
-        {
-            property: 'name',
-            header: {
-                label: 'Name'
+    const editable =
+        edit.edit({
+            isEditing: ({columnIndex, rowData}) => columnIndex === rowData.editing,
+            onActivate: ({columnIndex, rowData}) => {
+                editorActions.edit(rowData.id, columnIndex);
             },
-            cell: {
-                transforms: [
-                    editable(editorActions)(edit.input())
-                ]
+            onValue: ({value, rowData, property}) => {
+                editorActions.save(rowData.id, property, value);
             }
-        },
-        {
-            property: 'street1',
-            header: {
-                label: 'Street'
+        });
+
+    const sortable =
+        sort.sort({
+            getSortingColumns: () => view.locationSortingColumns,
+            onSort: (selectedColumn) => {
+                sort.byColumns({
+                    sortingColumns: view.locationSortingColumns,
+                    selectedColumn
+                })
+                editorActions.sort(selectedColumn)
             },
-            cell: {
-                transforms: [
-                    editable(editorActions)(edit.input())
-                ]
-            }
-        },
-        {
-            property: 'street2',
-            header: {
-                label: 'Street 2'
-            },
-            cell: {
-                transforms: [
-                    editable(editorActions)(edit.input())
-                ]
-            }
-        },
-        {
-            property: 'city',
-            header: {
-                label: 'City'
-            },
-            cell: {
-                transforms: [
-                    editable(editorActions)(edit.input())
-                ]
-            }
-        },
-        {
-            property: 'state',
-            header: {
-                label: 'State'
-            },
-            cell: {
-                transforms: [
-                    editable(editorActions)(edit.input())
-                ]
-            }
-        },
-        {
-            property: 'zip',
-            header: {
-                label: 'Zip Code'
-            },
-            cell: {
-                transforms: [
-                    editable(editorActions)(edit.input())
-                ]
-            }
-        },
-        {
-            property: 'phone1',
-            header: {
-                label: 'Phone'
-            },
-            cell: {
-                transforms: [
-                    editable(editorActions)(edit.input())
-                ]
-            }
-        },
-        {
-            property: 'phone2',
-            header: {
-                label: 'Phone 2'
-            },
-            cell: {
-                transforms: [
-                    editable(editorActions)(edit.input())
-                ]
-            }
-        },
-        {
-            props: {
-                style: {
-                    width: 25
+            strategy: sort.strategies.byProperty
+        });
+
+    return (
+        [
+            {
+                property: 'name',
+                header: {
+                    label: 'Name',
+                    transforms: [
+                        sortable
+                    ]
+                },
+                cell: {
+                    transforms: [
+                        editable(edit.input())
+                    ]
                 }
             },
-            cell: {
-                formatters: [
-                    (value, {rowData}) => (
-                        <span
-                            className="remove"
-                            title="Delete Location"
-                            onClick={() => editorActions.delete(rowData.id)}
-                            style={{cursor: 'pointer'}}
-                        >
-                            &#10008;
-                        </span>
-                    )
-                ]
+            {
+                property: 'street1',
+                header: {
+                    label: 'Street'
+                },
+                cell: {
+                    transforms: [
+                        editable(edit.input())
+                    ]
+                }
+            },
+            {
+                property: 'street2',
+                header: {
+                    label: 'Street 2'
+                },
+                cell: {
+                    transforms: [
+                        editable(edit.input())
+                    ]
+                }
+            },
+            {
+                property: 'city',
+                header: {
+                    label: 'City'
+                },
+                cell: {
+                    transforms: [
+                        editable(edit.input())
+                    ]
+                }
+            },
+            {
+                property: 'state',
+                header: {
+                    label: 'State'
+                },
+                cell: {
+                    transforms: [
+                        editable(edit.input())
+                    ]
+                }
+            },
+            {
+                property: 'zip',
+                header: {
+                    label: 'Zip Code'
+                },
+                cell: {
+                    transforms: [
+                        editable(edit.input())
+                    ]
+                }
+            },
+            {
+                property: 'phone1',
+                header: {
+                    label: 'Phone'
+                },
+                cell: {
+                    transforms: [
+                        editable(edit.input())
+                    ]
+                }
+            },
+            {
+                property: 'phone2',
+                header: {
+                    label: 'Phone 2'
+                },
+                cell: {
+                    transforms: [
+                        editable(edit.input())
+                    ]
+                }
+            },
+            {
+                props: {
+                    style: {
+                        width: 25
+                    }
+                },
+                cell: {
+                    formatters: [
+                        (value, {rowData}) => (
+                            <span
+                                className="remove"
+                                title="Delete Location"
+                                onClick={() => editorActions.delete(rowData.id)}
+                                style={{cursor: 'pointer'}}
+                            >
+                                &#10008;
+                            </span>
+                        )
+                    ]
+                }
             }
-        }
-    ]
-)
+        ]
+    )
+}
 
 export default LocationEditor;
 
