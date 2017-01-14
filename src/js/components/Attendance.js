@@ -34,7 +34,8 @@ const Attendance = ({club, stats, onWinnerClick}) => {
                                     <td>{player.name}</td>
                                     <td className="events">{player.events}</td>
                                 </tr>
-                            )}
+                            )
+                        }
                         </tbody>
                     </table>
                 </div>
@@ -48,7 +49,7 @@ const Attendance = ({club, stats, onWinnerClick}) => {
     else {
         return (
             <div className="attendance">
-                <h4>No stats for this period</h4>
+                <h4>No attendance stats for this period</h4>
             </div>
         )
     }

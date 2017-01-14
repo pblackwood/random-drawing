@@ -5,13 +5,26 @@ import Admin from "../../components/admin/Admin";
 const mapStateToProps = (state) => ({
     club: state.club,
     view: state.view,
-    metadata: state.metadata,
     stats: state.stats
 });
 
 const mapDispatchToProps = (dispatch) => ({
     changeTab: (id) => {
         dispatch(actions.changeAdminTab(id))
+    },
+    fileEvents: {
+        onChangeJsonFilePath: (path) => {
+            dispatch(actions.editJsonFilePath(path))
+        },
+        onChangeJsonFileName: (name) => {
+            dispatch(actions.editJsonFileName(name))
+        },
+        onSave: () => {
+            dispatch(actions.saveJsonFile())
+        },
+        onChangeVersion: () => {
+            dispatch(actions.updateMetadataVersion())
+        }
     },
     eventEvents: {
         onCreate: () => {
@@ -28,6 +41,9 @@ const mapDispatchToProps = (dispatch) => ({
         },
         onSelectEvent: (id) => {
             dispatch(actions.changeActiveEvent(id))
+        },
+        onColumnClick: (column) => {
+            dispatch(actions.changeEventSort(column))
         }
     },
     locationEvents: {

@@ -8,7 +8,15 @@ const stats = (state = [], action) => {
             break;
         case 'RECEIVE_ATTENDANCE_STATS':
             // New JSON has arrived from the API
-            newState = Object.assign([], state, action.attendance.stats);
+            // Only replace state if the metadata version is different than what we already have
+            if (state.version !== action.attendance.stats.version) {
+                newState = Object.assign({}, state, action.attendance.stats);
+            }
+            break;
+        case 'UPDATE_METADATA_VERSION':
+            newState = Object.assign({}, state, {
+                version: action.version
+            })
             break;
     }
     return newState;

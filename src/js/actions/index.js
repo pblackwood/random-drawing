@@ -161,3 +161,27 @@ export const removePlayerAttendance = (eventId, playerId) => ({
     playerId
 });
 
+export const editJsonFilePath = (path) => ({
+    type: 'EDIT_JSON_FILE_PATH',
+    path
+});
+
+export const editJsonFileName = (name) => ({
+    type: 'EDIT_JSON_FILE_PATH',
+    path
+});
+
+export const saveJsonFile = () => ({
+    type: 'SAVE_JSON_FILE'
+});
+
+export const updateMetadataVersion = () => ({
+    type: 'UPDATE_METADATA_VERSION',
+    version: uuid.v4()
+})
+
+export const changeEventSort = (column) => ({
+    type: 'CHANGE_EVENT_SORT',
+    column
+})
+

@@ -1,15 +1,26 @@
 import React from "react";
 import Tabs from "../Tabs";
+import FileEditor from "./FileEditor";
 import EventEditor from "./EventEditor";
 import LocationEditor from "./LocationEditor";
 import PlayerEditor from "./PlayerEditor";
 import AttendanceEditor from "./AttendanceEditor";
 
-const Admin = ({club, view, changeTab, eventEvents, locationEvents, playerEvents, attendanceEvents}) => {
+const Admin = ({club, view, stats, changeTab, fileEvents, eventEvents, locationEvents, playerEvents, attendanceEvents}) => {
 
     const tabData = [
         {
             id: 0,
+            name: 'File',
+            contents: <FileEditor
+                club={club}
+                stats={stats}
+                view={view}
+                editorEvents={fileEvents}
+            />
+        },
+        {
+            id: 1,
             name: 'Locations',
             contents: <LocationEditor
                 club={club}
@@ -17,15 +28,16 @@ const Admin = ({club, view, changeTab, eventEvents, locationEvents, playerEvents
             />
         },
         {
-            id: 1,
+            id: 2,
             name: 'Events',
             contents: <EventEditor
                 club={club}
+                view={view}
                 editorEvents={eventEvents}
             />
         },
         {
-            id: 2,
+            id: 3,
             name: 'Players',
             contents: <PlayerEditor
                 club={club}
@@ -33,7 +45,7 @@ const Admin = ({club, view, changeTab, eventEvents, locationEvents, playerEvents
             />
         },
         {
-            id: 3,
+            id: 4,
             name: 'Attendance',
             contents: <AttendanceEditor
                 club={club}

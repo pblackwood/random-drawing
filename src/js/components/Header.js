@@ -10,7 +10,7 @@ const Header = ({club, view, onQuarterChange, onYearChange}) => (
                 value={view.selectedYear}
                 onChange={onYearChange}
             >
-                {[2016].map((i) => (
+                {[2016, 2017].map((i) => (
                     <option key={i} value={i}>{i}</option>
                 ))}
             </select>
