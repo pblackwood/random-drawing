@@ -1,13 +1,14 @@
 import React, { PropTypes } from "react";
-import AttendeeList from "./AttendeeList";
-import * as edit from "react-edit";
 import { find, findIndex } from "lodash";
+import * as sort from "sortabular";
+import AttendeeList from "./AttendeeList";
 
 const AttendanceEditor = ({club, view, editorEvents}) => {
 
     const editorActions = {
         togglePlayerAttendance: editorEvents.onTogglePlayer,
-        selectEvent: editorEvents.onSelectEvent
+        selectEvent: editorEvents.onSelectEvent,
+        sort: editorEvents.onColumnClick
     }
 
     const activeEvent = view.activeEvent ? find(club.events, {id: view.activeEvent}) : {}
@@ -17,7 +18,8 @@ const AttendanceEditor = ({club, view, editorEvents}) => {
             <div className="attendance-list">
                 <AttendeeList
                     rows={club.players}
-                    columns={columnModel(club, editorActions, activeEvent)}
+                    columns={columnModel(editorActions, club, view, activeEvent)}
+                    sortingColumns={view.attendanceSortingColumns}
                     activeEvent={activeEvent}
                 />
             </div>
@@ -25,59 +27,69 @@ const AttendanceEditor = ({club, view, editorEvents}) => {
     )
 };
 
-const editable = (editorActions) => {
-    return edit.edit({
-        isEditing: ({columnIndex, rowData}) => columnIndex === rowData.editing,
-        onActivate: ({columnIndex, rowData}) => {
-            editorActions.edit(rowData.id, columnIndex);
-        },
-        onValue: ({value, rowData, property}) => {
-            editorActions.save(rowData.id, property, value);
-        }
-    })
-}
+const columnModel = (editorActions, club, view, activeEvent) => {
 
-const columnModel = (club, editorActions, activeEvent) => (
-    [
-        {
-            property: 'first',
-            header: {
-                label: 'First Name'
+    const sortable =
+        sort.sort({
+            getSortingColumns: () => view.attendanceSortingColumns,
+            onSort: (selectedColumn) => {
+                sort.byColumns({
+                    sortingColumns: view.attendanceSortingColumns,
+                    selectedColumn
+                })
+                editorActions.sort(selectedColumn)
             },
-            cell: {
-                property: 'first'
-            }
-        },
-        {
-            property: 'last',
-            header: {
-                label: 'Last Name'
-            },
-            cell: {
-                property: 'last'
-            }
-        },
-        {
-            props: {
-                style: {
-                    width: 25
+            strategy: sort.strategies.byProperty
+        });
+
+    return (
+        [
+            {
+                property: 'first',
+                header: {
+                    label: 'First Name',
+                    transforms: [
+                        sortable
+                    ]
+                },
+                cell: {
+                    property: 'first'
                 }
             },
-            cell: {
-                formatters: [
-                    (value, {rowData}) => (
-                        <input type="checkbox"
-                               className="toggle-player"
-                               title="Attended"
-                               defaultChecked={findIndex(activeEvent.attendees, (p) => (p === rowData.id)) >= 0}
-                               onClick={(e) => editorActions.togglePlayerAttendance(e.target, activeEvent.id, rowData.id)}>
-                        </input>
-                    )
-                ]
+            {
+                property: 'last',
+                header: {
+                    label: 'Last Name',
+                    transforms: [
+                        sortable
+                    ]
+                },
+                cell: {
+                    property: 'last'
+                }
+            },
+            {
+                props: {
+                    style: {
+                        width: 25
+                    }
+                },
+                cell: {
+                    formatters: [
+                        (value, {rowData}) => (
+                            <input type="checkbox"
+                                   className="toggle-player"
+                                   title="Attended"
+                                   defaultChecked={findIndex(activeEvent.attendees, (p) => (p === rowData.id)) >= 0}
+                                   onClick={(e) => editorActions.togglePlayerAttendance(e.target, activeEvent.id, rowData.id)}>
+                            </input>
+                        )
+                    ]
+                }
             }
-        }
-    ]
-)
+        ]
+    )
+}
 
 export default AttendanceEditor;
 

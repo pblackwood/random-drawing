@@ -24,6 +24,18 @@ const view = (state = {
             position: 0
         }
     },
+    playerSortingColumns: {
+        'last': {
+            direction: 'asc',
+            position: 0
+        }
+    },
+    attendanceSortingColumns: {
+        'last': {
+            direction: 'asc',
+            position: 0
+        }
+    },
     jsonFilePath: DEFAULT_JSON_FILE_PATH,
     jsonFileName: DEFAULT_JSON_FILE_NAME
 }, action) => {
@@ -61,15 +73,10 @@ const view = (state = {
             });
             break;
         case 'CHANGE_SORT':
-            newState = sortReducers[action.editor](state, action.column);
+            newState = changeSort("" + action.editor + "SortingColumns", state, action.column);
             break;
     }
     return newState;
-}
-
-const sortReducers = {
-    'events': (state, column) => (changeSort('eventSortingColumns', state, column)),
-    'locations': (state, column) => (changeSort('locationSortingColumns', state, column))
 }
 
 const changeSort = (sortingColumnName, state, column) => {
