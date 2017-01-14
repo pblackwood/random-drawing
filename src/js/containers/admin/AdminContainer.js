@@ -43,7 +43,7 @@ const mapDispatchToProps = (dispatch) => ({
             dispatch(actions.changeActiveEvent(id))
         },
         onColumnClick: (column) => {
-            dispatch(actions.changeEventSort(column))
+            dispatch(actions.changeSort('events', column))
         }
     },
     locationEvents: {
@@ -58,6 +58,9 @@ const mapDispatchToProps = (dispatch) => ({
         },
         onDelete: (id) => {
             dispatch(actions.deleteLocation(id))
+        },
+        onColumnClick: (column) => {
+            dispatch(actions.changeSort('locations', column))
         }
     },
     playerEvents: {

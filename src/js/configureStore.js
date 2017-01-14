@@ -8,7 +8,7 @@ import { loadState, saveState } from "./utilities/localStorage";
 
 const configureStore = () => {
 
-    const RESET_VIEW = true;
+    const RESET_VIEW = false;
     const persistedState = loadState(RESET_VIEW);
     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
     const store = createStore(drawingApp, persistedState, composeEnhancers(applyMiddleware(thunkMiddleware, createLogger())));

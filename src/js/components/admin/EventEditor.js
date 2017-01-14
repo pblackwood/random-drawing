@@ -1,16 +1,18 @@
 import React, { PropTypes } from "react";
-import EventList from "./EventList";
-import * as edit from "react-edit";
 import { find } from "lodash";
+import * as edit from "react-edit";
+import * as sort from "sortabular";
+import EventList from "./EventList";
 
-const EventEditor = ({club, editorEvents}) => {
+const EventEditor = ({club, view, editorEvents}) => {
 
     const editorActions = {
         create: editorEvents.onCreate,
         edit: editorEvents.onEdit,
         save: editorEvents.onSave,
         delete: editorEvents.onDelete,
-        selectEvent: editorEvents.onSelectEvent
+        selectEvent: editorEvents.onSelectEvent,
+        sort: editorEvents.onColumnClick
     }
 
     const locations = club.locations ? club.locations.map((loc) => ({value: loc.id, name: loc.name})) : []
@@ -19,123 +21,150 @@ const EventEditor = ({club, editorEvents}) => {
         <div className="event-list">
             <EventList
                 rows={club.events}
-                columns={columnModel(editorActions, locations)}
+                columns={columnModel(editorActions, view, locations)}
+                sortingColumns={view.eventSortingColumns}
                 createEvent={editorActions.create}
             />
         </div>
     )
-};
 
-const editable = (editorActions) => {
-    return edit.edit({
-        isEditing: ({columnIndex, rowData}) => columnIndex === rowData.editing,
-        onActivate: ({columnIndex, rowData}) => {
-            editorActions.edit(rowData.id, columnIndex);
-        },
-        onValue: ({value, rowData, property}) => {
-            editorActions.save(rowData.id, property, value);
-        }
-    })
 }
 
-const columnModel = (editorActions, locations) => (
-    [
-        {
-            property: 'name',
-            header: {
-                label: 'What'
+const columnModel = (editorActions, view, locations) => {
+
+    const editable =
+        edit.edit({
+            isEditing: ({columnIndex, rowData}) => columnIndex === rowData.editing,
+            onActivate: ({columnIndex, rowData}) => {
+                editorActions.edit(rowData.id, columnIndex);
             },
-            cell: {
-                transforms: [
-                    editable(editorActions)(edit.input())
-                ]
+            onValue: ({value, rowData, property}) => {
+                editorActions.save(rowData.id, property, value);
             }
-        },
-        {
-            property: 'date',
-            header: {
-                label: 'When'
+        });
+
+    const sortable =
+        sort.sort({
+            getSortingColumns: () => view.eventSortingColumns,
+            onSort: (selectedColumn) => {
+                sort.byColumns({
+                    sortingColumns: view.eventSortingColumns,
+                    selectedColumn
+                })
+                editorActions.sort(selectedColumn)
             },
-            cell: {
-                transforms: [
-                    editable(editorActions)(edit.input())
-                ]
-            }
-        },
-        {
-            property: 'location',
-            header: {
-                label: 'Where'
+            strategy: sort.strategies.byProperty
+        });
+
+    return (
+        [
+            {
+                property: 'name',
+                header: {
+                    label: 'What',
+                    transforms: [
+                        sortable
+                    ]
+                },
+                cell: {
+                    transforms: [
+                        editable(edit.input())
+                    ]
+                }
             },
-            cell: {
-                transforms: [
-                    editable(editorActions)(edit.dropdown({options: locations}))
-                ],
-                formatters: [
-                    (v) => {
-                        let loc = find(locations, {value: v});
-                        return loc ? loc.name : v
+            {
+                property: 'date',
+                header: {
+                    label: 'When',
+                    transforms: [
+                        sortable
+                    ]
+                },
+                cell: {
+                    transforms: [
+                        editable(edit.input())
+                    ]
+                }
+            },
+            {
+                property: 'location',
+                header: {
+                    label: 'Where'
+                    // TODO, sorting on the uuid, not the name
+                    // transforms: [
+                    //     sortable
+                    // ]
+                },
+                cell: {
+                    transforms: [
+                        editable(edit.dropdown({options: locations}))
+                    ],
+                    formatters: [
+                        (v) => {
+                            let loc = find(locations, {value: v});
+                            return loc ? loc.name : v
+                        }
+                    ]
+                }
+            },
+            {
+                property: 'attendees',
+                header: {
+                    label: 'How Many'
+                },
+                cell: {
+                    formatters: [
+                        (value, {rowData}) => (
+                            <span>{rowData.attendees.length}</span>
+                        )
+                    ]
+                },
+            },
+            {
+                props: {
+                    style: {
+                        width: 25
                     }
-                ]
-            }
-        },
-        {
-            property: 'attendees',
-            header: {
-                label: 'How Many'
-            },
-            cell: {
-                formatters: [
-                    (value, {rowData}) => (
-                        <span>{rowData.attendees.length}</span>
-                    )
-                ]
-            },
-        },
-        {
-            props: {
-                style: {
-                    width: 25
+                },
+                cell: {
+                    formatters: [
+                        (value, {rowData}) => (
+                            <span
+                                className="attendee"
+                                title="Add Attendees"
+                                onClick={() => editorActions.selectEvent(rowData.id)}
+                                style={{cursor: 'pointer'}}
+                            >
+                        <i className="fa fa-user-plus"></i>
+                    </span>
+                        )
+                    ]
                 }
             },
-            cell: {
-                formatters: [
-                    (value, {rowData}) => (
-                        <span
-                            className="attendee"
-                            title="Add Attendees"
-                            onClick={() => editorActions.selectEvent(rowData.id)}
-                            style={{cursor: 'pointer'}}
-                        >
-                            <i className="fa fa-user-plus"></i>
-                        </span>
-                    )
-                ]
-            }
-        },
-        {
-            props: {
-                style: {
-                    width: 25
+            {
+                props: {
+                    style: {
+                        width: 25
+                    }
+                },
+                cell: {
+                    formatters: [
+                        (value, {rowData}) => (
+                            <span
+                                className="remove"
+                                title="Delete Event"
+                                onClick={() => editorActions.delete(rowData.id)}
+                                style={{cursor: 'pointer'}}
+                            >
+                        <i className="fa fa-trash"></i>
+                    </span>
+                        )
+                    ]
                 }
-            },
-            cell: {
-                formatters: [
-                    (value, {rowData}) => (
-                        <span
-                            className="remove"
-                            title="Delete Event"
-                            onClick={() => editorActions.delete(rowData.id)}
-                            style={{cursor: 'pointer'}}
-                        >
-                            <i className="fa fa-trash"></i>
-                        </span>
-                    )
-                ]
             }
-        }
-    ]
-)
+        ]
+    )
+}
 
 export default EventEditor;
 
