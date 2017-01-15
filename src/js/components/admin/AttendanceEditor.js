@@ -15,14 +15,12 @@ const AttendanceEditor = ({club, view, editorEvents}) => {
 
     return (
         <div className="attendance-editor">
-            <div className="attendance-list">
-                <AttendeeList
-                    rows={club.players}
-                    columns={columnModel(editorActions, club, view, activeEvent)}
-                    sortingColumns={view.attendanceSortingColumns}
-                    activeEvent={activeEvent}
-                />
-            </div>
+            <AttendeeList
+                rows={club.players}
+                columns={columnModel(editorActions, club, view, activeEvent)}
+                sortingColumns={view.attendanceSortingColumns}
+                activeEvent={activeEvent}
+            />
         </div>
     )
 };

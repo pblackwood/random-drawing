@@ -1,6 +1,5 @@
 import request from "superagent";
 import uuid from "uuid";
-import moment from "moment";
 
 export const pickWinner = (year, quarter) => ({
     type: 'PICK_WINNER',
@@ -48,13 +47,14 @@ export const requestAttendanceStats = () => (
     }
 );
 
+// date: moment().format('YYYY-MM-DD'),
 export const createEvent = () => ({
     type: 'CREATE_EVENT',
     event: {
         id: uuid.v4(),
-        name: "New Event",
-        location: "Select Location",
-        date: moment().format('YYYY-MM-DD'),
+        name: "",
+        location: "",
+        date: "",
         attendees: []
     }
 });
@@ -81,13 +81,13 @@ export const createLocation = () => ({
     type: 'CREATE_LOCATION',
     location: {
         id: uuid.v4(),
-        name: "New Location",
-        street1: "123 Main St",
+        name: "",
+        street1: "",
         street2: "",
         city: "Pittsburgh",
         state: "PA",
-        zip: "15000",
-        phone1: "412-123-4567",
+        zip: "",
+        phone1: "",
         phone2: ""
     }
 });
@@ -119,8 +119,8 @@ export const createPlayer = () => ({
     type: 'CREATE_PLAYER',
     player: {
         id: uuid.v4(),
-        first: "New",
-        last: "Player",
+        first: "",
+        last: "",
         email: "",
         phone: ""
     }
