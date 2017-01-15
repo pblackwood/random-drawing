@@ -14,7 +14,7 @@ const PlayerList = ({rows, columns, sortingColumns, createPlayer}) => {
         })(rows);
 
         return (
-            <div >
+            <div className="player-list">
                 <button type="button"
                         className="pure-button pure-button-primary player-button"
                         onClick={e => {
@@ -27,7 +27,10 @@ const PlayerList = ({rows, columns, sortingColumns, createPlayer}) => {
                     className="pure-table pure-table-striped"
                     columns={columns}>
                     <Table.Header />
-                    <Table.Body rows={sortedRows} rowKey="id"/>
+                    <Table.Body rows={sortedRows}
+                                rowKey="id"
+                                className="player-list-table"
+                    />
                 </Table.Provider>
             </div>
         )

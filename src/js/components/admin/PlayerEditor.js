@@ -14,7 +14,7 @@ const PlayerEditor = ({club, view, editorEvents}) => {
     }
 
     return (
-        <div className="player-list">
+        <div className="player-editor">
             <PlayerList
                 rows={club.players}
                 columns={columnModel(editorActions, view)}
