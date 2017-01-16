@@ -14,22 +14,6 @@
     text-align: center;
 }
 
-.admin h1, .admin h2 {
-    text-align: center;
-}
-
-.admin .event-list, .admin .location-list, .admin .player-list {
-    /*margin-top: 25px;*/
-}
-
-.admin-tabs {
-    margin-bottom: 25px;
-}
-
-.admin .attendance {
-    /*background-color: indianred;*/
-}
-
 .header select {
     margin-left: 10px;
 }
@@ -75,6 +59,24 @@ section {
 
 .admin a {
     text-decoration: none;
+}
+
+.admin h1, .admin h2 {
+    text-align: center;
+}
+
+.admin .event-list, .admin .location-list, .admin .player-list {
+    /*margin-top: 25px;*/
+}
+
+.admin-tabs {
+    margin-bottom: 25px;
+}
+
+.admin .player-list, .admin .attendance-list {
+    display: block;
+    max-height: 750px;
+    overflow-y: auto;
 }
 
 .file-editor h5 {
