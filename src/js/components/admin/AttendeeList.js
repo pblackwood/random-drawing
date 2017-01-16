@@ -15,7 +15,7 @@ const AttendeeList = ({rows, columns, sortingColumns, activeEvent}) => {
 
         return (
             <div className="attendance-list">
-                <h3>{ activeEvent ? activeEvent.name + ", " + activeEvent.date : "" }</h3>
+                <h3>{ activeEvent ? (activeEvent.name + ", " + activeEvent.date + ", " + activeEvent.attendees.length) : ""}</h3>
                 <Table.Provider
                     className="pure-table pure-table-striped"
                     columns={columns}>
