@@ -79,6 +79,12 @@ section {
     overflow-y: auto;
 }
 
+.admin .organizer {
+    text-align: center;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
 .file-editor h5 {
     display: inline;
     margin-right: 20px;
