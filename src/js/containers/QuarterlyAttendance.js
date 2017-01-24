@@ -42,12 +42,12 @@ const countAttendance = (events, players) => {
         forEach(e.attendees, (a) => {
             let p = find(eventPlayers, {id: a});
             if (p) {
-                p.events++
+                p.attended++
             }
             else {
                 p = find(allPlayers, {id: a});
                 if (p) {
-                    p.events = 1;
+                    p.attended = 1;
                     eventPlayers.push(p);
                 }
             }
@@ -59,7 +59,7 @@ const countAttendance = (events, players) => {
 const getTotalAttendance = (playerList) => {
     let total = 0;
     playerList.forEach(p => {
-        total += p.events
+        total += p.attended
     });
     return total;
 }

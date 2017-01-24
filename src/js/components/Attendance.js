@@ -34,7 +34,7 @@ const Attendance = ({club, stats, onWinnerClick}) => {
                             getSortedPlayerList(stats.playerList).map((player, i) =>
                                 <tr key={i}>
                                     <td>{playerName(player)}</td>
-                                    <td className="events">{player.events}</td>
+                                    <td className="events">{player.attended}</td>
                                 </tr>
                             )
                         }
@@ -59,7 +59,7 @@ const Attendance = ({club, stats, onWinnerClick}) => {
 
 const getSortedPlayerList = (playerList) => {
     return playerList.sort((p1, p2) => {
-        let result = p2.events - p1.events;
+        let result = p2.attended - p1.attended;
         if (result == 0) {
             return p1.first.localeCompare(p2.first);
         }
@@ -84,7 +84,7 @@ Attendance.propTypes = {
         winners: PropTypes.arrayOf(PropTypes.string).isRequired,
         playerList: PropTypes.arrayOf(PropTypes.shape({
             first: PropTypes.string.isRequired,
-            events: PropTypes.number.isRequired
+            attended: PropTypes.number.isRequired
         }))
     }).isRequired,
     onWinnerClick: PropTypes.func.isRequired
