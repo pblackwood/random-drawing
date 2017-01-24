@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { pickWinner } from "../actions";
 import moment from "moment";
-import { find, template } from "lodash";
+import { find, forEach, template } from "lodash";
 import Attendance from "../components/Attendance";
 
 const mapStateToProps = (state) => ({
@@ -35,25 +35,25 @@ const findAllEvents = (events, year, quarter) => {
     })
 }
 
-const findPlayer = (players, id) => {
-    let player = find(players, {id: id})
-    let playerName = template('<%= first %> <%= last %>')
-    return {
-        name: playerName(player),
-        events: 0
-    }
-}
-
 const countAttendance = (events, players) => {
-    let playerList = []
+    let eventPlayers = [];
+    let allPlayers = players.filter(p => !p.organizer);
     events.forEach((e) => {
-        playerList = playerList.concat(e.attendees.map((a) => {
-            let p = find(playerList, {id: a}) || findPlayer(players, a);
-            p.events++
-            return p;
-        }))
+        forEach(e.attendees, (a) => {
+            let p = find(eventPlayers, {id: a});
+            if (p) {
+                p.events++
+            }
+            else {
+                p = find(allPlayers, {id: a});
+                if (p) {
+                    p.events = 1;
+                    eventPlayers.push(p);
+                }
+            }
+        })
     })
-    return playerList
+    return eventPlayers;
 }
 
 const getTotalAttendance = (playerList) => {
