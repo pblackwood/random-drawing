@@ -1,4 +1,5 @@
 import React, { PropTypes } from "react";
+import { template } from "lodash";
 
 const Attendance = ({club, stats, onWinnerClick}) => {
     let winners, pickWinners;
@@ -17,6 +18,7 @@ const Attendance = ({club, stats, onWinnerClick}) => {
     }
 
     if (stats.playerList && stats.playerList.length > 0) {
+        let playerName = template('<%= first %> <%= last %>')
         return (
             <div className="attendance row">
                 <h4 className="col-xs-12">Total Events Attended (not including organizers): {stats.totalAttendance}</h4>
@@ -31,7 +33,7 @@ const Attendance = ({club, stats, onWinnerClick}) => {
                         {
                             getSortedPlayerList(stats.playerList).map((player, i) =>
                                 <tr key={i}>
-                                    <td>{player.name}</td>
+                                    <td>{playerName(player)}</td>
                                     <td className="events">{player.events}</td>
                                 </tr>
                             )
@@ -59,7 +61,7 @@ const getSortedPlayerList = (playerList) => {
     return playerList.sort((p1, p2) => {
         let result = p2.events - p1.events;
         if (result == 0) {
-            return p1.name.localeCompare(p2.name);
+            return p1.first.localeCompare(p2.first);
         }
         else {
             return result;
@@ -81,7 +83,7 @@ Attendance.propTypes = {
         totalAttendance: PropTypes.number.isRequired,
         winners: PropTypes.arrayOf(PropTypes.string).isRequired,
         playerList: PropTypes.arrayOf(PropTypes.shape({
-            name: PropTypes.string.isRequired,
+            first: PropTypes.string.isRequired,
             events: PropTypes.number.isRequired
         }))
     }).isRequired,

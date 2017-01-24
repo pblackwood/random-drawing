@@ -103,6 +103,23 @@ const columnModel = (editorActions, view) => {
                 }
             },
             {
+                property: 'organizer',
+                header: {
+                    label: 'Org?'
+                },
+                cell: {
+                    formatters: [
+                        (value, {rowData}) => {
+                            return (
+                                <span className="organizer">
+                                <i className={value ? "check fa fa-check" : ""}></i>
+                            </span>
+                            )
+                        }
+                    ]
+                }
+            },
+            {
                 props: {
                     style: {
                         width: 25
