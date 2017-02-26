@@ -1,0 +1,77 @@
+
+.header {
+    h1, h3 {
+        text-align: center
+    }
+    select {
+        margin-left: 10px;
+    }
+    select#quarter {
+        width: 50px;
+    }
+    select#year {
+        width: 75px;
+    }
+    .stats-year {
+        text-align: right;
+    }
+}
+
+.attendance {
+    ul li {
+        list-style: none;
+    }
+    .events, h4 {
+        text-align: center;
+    }
+}
+
+.winner {
+    font-weight: bold;
+    color: #884444;
+}
+
+.playerTable {
+    height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.event-button, .location-button, .player-button {
+    margin-bottom: 5px;
+}
+
+.nav {
+    padding: 10px 10px 0;
+}
+
+.is-visible {
+    border: solid 1px red;
+}
+
+section {
+    margin: 20px;
+}
+
+table {
+    .sort {
+        cursor: pointer;
+        cursor: hand;
+
+        &:after {
+            padding-left: 1em;
+            font-size: 0.5em;
+        }
+    }
+    .sort-asc:after {
+        content: '\25BC';
+    }
+
+    .sort-desc:after {
+        content: '\25B2';
+    }
+
+    .sort-order {
+        margin-left: 0.5em;
+    }
+}
