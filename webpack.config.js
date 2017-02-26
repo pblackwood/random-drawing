@@ -2,9 +2,10 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
+    context: path.resolve(__dirname, './src'),
     entry: {
-        app: './src/js/index.js',
-        admin: './src/js/admin.js'
+        app: './js/index.js',
+        admin: './js/admin.js'
     },
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -12,22 +13,37 @@ module.exports = {
         publicPath: '/'
     },
     devServer: {
-        inline: true,
-        contentBase: './dist',
+        contentBase: path.resolve(__dirname, './src'),
         port: 8090
     },
-    devTool: 'cheap-module-source-map',
+    devtool: 'cheap-module-source-map',
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
-                loaders: ['babel'],
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['es2015', 'react']
+                        }
+                    }
+                ]
             },
             {
-                test: /\.json$/,
-                loader: 'json',
-                exclude: /node_modules/
+                test: /\.less$/,
+                exclude: /node_modules/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        }
+                    },
+                    'less-loader'
+                ]
             }
         ]
     },
