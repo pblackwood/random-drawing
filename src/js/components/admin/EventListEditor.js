@@ -4,15 +4,15 @@ import * as edit from "react-edit";
 import * as sort from "sortabular";
 import EventList from "./EventList";
 
-const EventEditor = ({club, view, editorEvents}) => {
+const EventListEditor = ({club, view, events}) => {
 
     const editorActions = {
-        create: editorEvents.onCreate,
-        edit: editorEvents.onEdit,
-        save: editorEvents.onSave,
-        delete: editorEvents.onDelete,
-        selectEvent: editorEvents.onSelectEvent,
-        sort: editorEvents.onColumnClick
+        create: events.onCreate,
+        edit: events.onEdit,
+        save: events.onSave,
+        delete: events.onDelete,
+        selectEvent: events.onSelectEvent,
+        sort: events.onColumnClick
     }
 
     const locations = club.locations ? club.locations.map((loc) => ({value: loc.id, name: loc.name})) : []
@@ -121,11 +121,14 @@ const columnModel = (editorActions, view, locations) => {
                 },
             },
             {
-                props: {
-                    style: {
-                        width: 25
-                    }
+                header: {
+                    label: 'Edit'
                 },
+                // props: {
+                //     style: {
+                //         width: 25
+                //     }
+                // },
                 cell: {
                     formatters: [
                         (value, {rowData}) => (
@@ -166,6 +169,6 @@ const columnModel = (editorActions, view, locations) => {
     )
 }
 
-export default EventEditor;
+export default EventListEditor;
 
 

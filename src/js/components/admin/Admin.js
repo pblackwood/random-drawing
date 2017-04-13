@@ -1,59 +1,38 @@
 import React from "react";
 import Tabs from "../Tabs";
-import FileEditor from "./FileEditor";
-import EventEditor from "./EventEditor";
-import LocationEditor from "./LocationEditor";
-import PlayerEditor from "./PlayerEditor";
-import AttendanceEditor from "./AttendanceEditor";
+import FileContainer from "../../containers/admin/FileContainer";
+import EventListContainer from "../../containers/admin/EventListContainer";
+import LocationListContainer from "../../containers/admin/LocationListContainer";
+import PlayerListContainer from "../../containers/admin/PlayerListContainer";
+import AttendanceContainer from "../../containers/admin/AttendanceContainer";
 
-const Admin = ({club, view, stats, changeTab, fileEvents, eventEvents, locationEvents, playerEvents, attendanceEvents}) => {
+const Admin = ({view, changeTab}) => {
 
     const tabData = [
         {
             id: 0,
             name: 'File',
-            contents: <FileEditor
-                club={club}
-                stats={stats}
-                view={view}
-                editorEvents={fileEvents}
-            />
+            contents: <FileContainer />
         },
         {
             id: 1,
             name: 'Locations',
-            contents: <LocationEditor
-                club={club}
-                view={view}
-                editorEvents={locationEvents}
-            />
+            contents: <LocationListContainer />
         },
         {
             id: 2,
             name: 'Events',
-            contents: <EventEditor
-                club={club}
-                view={view}
-                editorEvents={eventEvents}
-            />
+            contents: <EventListContainer />
         },
         {
             id: 3,
             name: 'Players',
-            contents: <PlayerEditor
-                club={club}
-                view={view}
-                editorEvents={playerEvents}
-            />
+            contents: <PlayerListContainer />
         },
         {
             id: 4,
             name: 'Attendance',
-            contents: <AttendanceEditor
-                club={club}
-                view={view}
-                editorEvents={attendanceEvents}
-            />
+            contents: <AttendanceContainer />
         }
     ]
 
@@ -69,5 +48,4 @@ const Admin = ({club, view, stats, changeTab, fileEvents, eventEvents, locationE
 };
 
 export default Admin;
-
 
