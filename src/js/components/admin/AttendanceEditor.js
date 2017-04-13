@@ -3,12 +3,12 @@ import { find, findIndex } from "lodash";
 import * as sort from "sortabular";
 import AttendeeList from "./AttendeeList";
 
-const AttendanceEditor = ({club, view, editorEvents}) => {
+const AttendanceEditor = ({club, view, events}) => {
 
     const editorActions = {
-        togglePlayerAttendance: editorEvents.onTogglePlayer,
-        selectEvent: editorEvents.onSelectEvent,
-        sort: editorEvents.onColumnClick
+        togglePlayerAttendance: events.onTogglePlayer,
+        selectEvent: events.onSelectEvent,
+        sort: events.onColumnClick
     }
 
     const activeEvent = view.activeEvent ? find(club.events, {id: view.activeEvent}) : {}

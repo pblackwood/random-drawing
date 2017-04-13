@@ -1,9 +1,8 @@
 import React, { PropTypes } from "react";
-import * as edit from "react-edit";
 import { find } from "lodash";
 import { v4 } from "uuid";
 
-const FileEditor = ({club, stats, view, editorEvents}) => {
+const FileEditor = ({club, stats, view, events}) => {
 
     const writeFile = () => {
         var json = JSON.stringify({
@@ -38,18 +37,6 @@ const FileEditor = ({club, stats, view, editorEvents}) => {
         </div>
     )
 };
-
-const editable = (editorActions) => {
-    return edit.edit({
-        isEditing: ({columnIndex, rowData}) => columnIndex === rowData.editing,
-        onActivate: ({columnIndex, rowData}) => {
-            editorActions.edit(rowData.id, columnIndex);
-        },
-        onValue: ({value, rowData, property}) => {
-            editorActions.save(rowData.id, property, value);
-        }
-    })
-}
 
 export default FileEditor;
 

@@ -3,14 +3,14 @@ import * as edit from "react-edit";
 import * as sort from "sortabular";
 import LocationList from "./LocationList";
 
-const LocationEditor = ({club, view, editorEvents}) => {
+const LocationListEditor = ({club, view, events}) => {
 
     const editorActions = {
-        create: editorEvents.onCreate,
-        edit: editorEvents.onEdit,
-        save: editorEvents.onSave,
-        delete: editorEvents.onDelete,
-        sort: editorEvents.onColumnClick
+        create: events.onCreate,
+        edit: events.onEdit,
+        save: events.onSave,
+        delete: events.onDelete,
+        sort: events.onColumnClick
     }
 
     return (
@@ -169,6 +169,6 @@ const columnModel = (editorActions, view) => {
     )
 }
 
-export default LocationEditor;
+export default LocationListEditor;
 
 
