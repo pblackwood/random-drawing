@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Pick a player at random from a list of players",
   "scripts": {
-    "start": "webpack --config webpack.config.js",
+      "start": "webpack-dev-server --open --config webpack.config.js",
     "test": "jest",
     "test:watch": "npm test -- --watch"
   },
