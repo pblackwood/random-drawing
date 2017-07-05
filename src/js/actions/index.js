@@ -186,3 +186,44 @@ export const changeSort = (editor, column) => ({
     column
 })
 
+export const createTournament = () => ({
+    type: 'CREATE_TOURNAMENT',
+    tournament: {
+        id: uuid.v4(),
+        length: 5,
+        format: 3,
+        entry: 10.0,
+        fee: 1.0
+    }
+})
+
+export const editTournament = (id, columnIndex) => ({
+    type: 'EDIT_TOURNAMENT',
+    id,
+    columnIndex
+});
+
+export const saveTournament = (id, property, value) => ({
+    type: 'SAVE_TOURNAMENT',
+    id,
+    property,
+    value
+});
+
+export const deleteTournament = (id) => ({
+    type: 'DELETE_TOURNAMENT',
+    id
+});
+
+export const addTournamentPlayer = (tournamentId, playerId) => ({
+    type: 'ADD_TOURNAMENT_PLAYER',
+    tournamentId,
+    playerId
+});
+
+export const removeTournamentPlayer = (tournamentId, playerId) => ({
+    type: 'REMOVE_TOURNAMENT_PLAYER',
+    tournamentId,
+    playerId
+});
+

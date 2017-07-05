@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import * as actions from "../../actions";
-import LocationListEditor from "../../components/admin/LocationListEditor";
+import PlayerEditor from "../../components/admin/PlayerEditor";
 
 const mapStateToProps = (state) => ({
     club: state.club,
@@ -11,24 +11,24 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
     events: {
         onCreate: () => {
-            dispatch(actions.createLocation())
+            dispatch(actions.createPlayer())
         },
         onEdit: (id, columnIndex) => {
-            dispatch(actions.editLocation(id, columnIndex))
+            dispatch(actions.editPlayer(id, columnIndex))
         },
         onSave: (id, property, value) => {
-            dispatch(actions.saveLocation(id, property, value))
+            dispatch(actions.savePlayer(id, property, value))
         },
         onDelete: (id) => {
-            dispatch(actions.deleteLocation(id))
+            dispatch(actions.deletePlayer(id))
         },
         onColumnClick: (column) => {
-            dispatch(actions.changeSort('location', column))
+            dispatch(actions.changeSort('player', column))
         }
     },
 });
 
-const LocationListContainer = connect(mapStateToProps, mapDispatchToProps)(LocationListEditor);
+const PlayerContainer = connect(mapStateToProps, mapDispatchToProps)(PlayerEditor);
 
-export default LocationListContainer
+export default PlayerContainer
 

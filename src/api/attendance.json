@@ -1,13 +1,35 @@
 {
     "club": {
         "director": "Peter Blackwood",
+        "matches": [
+            {
+                "id": "ghi",
+                "length": 5,
+                "round": 2,
+                "players": [],
+                "winner": "abc"
+            }
+        ],
+        "tournaments": [
+            {
+                "id": "xyz",
+                "length": 5,
+                "format": 3,
+                "entry": 10.0,
+                "fee": 1.0,
+                "players": [],
+                "matches": [],
+                "winner": "abc"
+            }
+        ],
         "events": [
             {
                 "attendees": [],
                 "date": "2017-01-17",
                 "id": "c140a553-14f1-4d8b-971d-ee4670ea208a",
                 "location": "d4a17aeb-8ac7-4e8c-a6cd-1fbaf55ab412",
-                "name": "Backgammon and Ribs"
+                "name": "Backgammon and Ribs",
+                "tournaments": []
             },
             {
                 "attendees": [],
@@ -923,6 +945,13 @@
                 "quarter": 4,
                 "winners": [],
                 "year": 2016
+            }
+        ],
+        "tournaments": [
+            {
+                "quarter": 1,
+                "year": 2017,
+                "winners": "xyz"
             }
         ],
         "version": "e40956e8-5777-4ba4-b95b-80b4904b02cf"

@@ -4,7 +4,7 @@ import * as edit from "react-edit";
 import * as sort from "sortabular";
 import EventList from "./EventList";
 
-const EventListEditor = ({club, view, events}) => {
+const EventEditor = ({club, view, events}) => {
 
     const editorActions = {
         create: events.onCreate,
@@ -169,6 +169,6 @@ const columnModel = (editorActions, view, locations) => {
     )
 }
 
-export default EventListEditor;
+export default EventEditor;
 
 

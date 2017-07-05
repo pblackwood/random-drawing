@@ -1,9 +1,9 @@
 import React from "react";
 import Tabs from "../Tabs";
 import FileContainer from "../../containers/admin/FileContainer";
-import EventListContainer from "../../containers/admin/EventListContainer";
-import LocationListContainer from "../../containers/admin/LocationListContainer";
-import PlayerListContainer from "../../containers/admin/PlayerListContainer";
+import EventContainer from "../../containers/admin/EventContainer";
+import LocationContainer from "../../containers/admin/LocationContainer";
+import PlayerContainer from "../../containers/admin/PlayerContainer";
 import AttendanceContainer from "../../containers/admin/AttendanceContainer";
 
 const Admin = ({view, changeTab}) => {
@@ -17,17 +17,17 @@ const Admin = ({view, changeTab}) => {
         {
             id: 1,
             name: 'Locations',
-            contents: <LocationListContainer />
+            contents: <LocationContainer />
         },
         {
             id: 2,
             name: 'Events',
-            contents: <EventListContainer />
+            contents: <EventContainer />
         },
         {
             id: 3,
             name: 'Players',
-            contents: <PlayerListContainer />
+            contents: <PlayerContainer />
         },
         {
             id: 4,

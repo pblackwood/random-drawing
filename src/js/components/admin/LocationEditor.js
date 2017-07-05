@@ -3,7 +3,7 @@ import * as edit from "react-edit";
 import * as sort from "sortabular";
 import LocationList from "./LocationList";
 
-const LocationListEditor = ({club, view, events}) => {
+const LocationEditor = ({club, view, events}) => {
 
     const editorActions = {
         create: events.onCreate,
@@ -169,6 +169,6 @@ const columnModel = (editorActions, view) => {
     )
 }
 
-export default LocationListEditor;
+export default LocationEditor;
 
 
